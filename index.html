@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en-US">
+	
+<head>
+    <meta name="description" content="Minimalist UI Kit">
+    <title>Gary Magnone</title>
+
+
+    <link href="sanitize.css" rel="stylesheet" type="text/css">
+    <link href="minimalist-UI.css" rel="stylesheet" type="text/css">
+    <link href="minimalist-UI-fonts.css" rel="stylesheet" type="text/css">
+</head>
+
+<style>
+    p, h1, h2, h3, h4, h5, h6, font {
+        margin:0;
+    }
+    .container {
+        display:grid;
+        grid-template-rows:1fr;
+    }
+
+    .social-icons {
+        position:absolute;
+        top:25px;
+        left:25px;
+    }
+    @media(min-width:1550px) {
+        .social-icons {
+            position:fixed;
+        }
+    }
+    .social-icons a {
+        text-decoration:none;
+    }
+    .social-icons a,
+    .social-icons img {
+        width:20px;
+        filter: saturate(0%) brightness(70%) contrast(1000%);
+    }
+
+    nav {
+        position:absolute;
+        top:25px;
+        right:25px;
+    }
+    @media(min-width:1750px) {
+        nav {
+            position:fixed;
+        }
+    }
+    nav a {
+        text-decoration:none;
+    }
+    .heading-xl {
+        line-height:5rem;
+    }
+    .inline-headshot {
+        display:inline;
+        margin:0 20px;
+        width:85px;
+        height:85px;
+    }
+
+    .grid-2 {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        width:100%;
+        column-gap:20px;
+        row-gap:20px;
+    }
+    .grid-3 {
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        width:100%;
+        column-gap:20px;
+        row-gap:20px;
+    }
+    .card {
+        position:relative;
+        display:inline-block;
+        border-radius:15px;
+        padding:25px;
+        background-color:#f6f6f6;
+        cursor:pointer;
+    }
+    .color-cards .card {
+        padding:50px 25px;
+    }
+    .testimonials .card {
+        padding:35px 25px;
+    }
+
+    .date-label {
+        font-size:12px;
+        color:black;
+        padding:0px 10px;
+        background-color:white;
+        border-radius:1000px;
+        position:absolute;
+        top:12px;
+        left:12px;
+        backdrop-filter: blur(10px);
+    }
+
+    .darkmode {
+        background-color:black;
+    }
+    .darkmode * {
+        color:white;
+    }
+    .darkmode .social-icons a,
+    .darkmode .social-icons img {
+        filter: saturate(0%) brightness(100000%) contrast(1000%);
+    }
+    .darkmode .card {
+        background-color:rgba(255,255,255,0.1) !important;
+    }
+
+    .logo {
+        width:55px;
+        height:55px;
+        margin-bottom:20px;
+    }
+
+    .testimonial {
+        border-radius:1000px;
+        width:55px;
+        margin-bottom:20px;
+    }
+</style>
+	
+<body class="//darkmode">
+
+    <div class="social-icons">
+        <a rel="noopener" href="#" target="_blank" class="mr-lg">
+            <img src="https://treedoctorinc.com/assets/facebook-icon.svg" alt="Facebook">
+        </a>
+        <a rel="noopener" href="#" target="_blank" class="mr-lg">
+            <img src="https://treedoctorinc.com//assets/instagram-icon.svg" alt="Instagram">
+        </a>
+        <a rel="noopener" href="#" target="_blank" class="mr-lg">
+            <img src="https://treedoctorinc.com//assets/linkedin-icon.svg" alt="LinkedIn">
+        </a>
+        <a rel="noopener" href="#" target="_blank">
+            <img src="https://treedoctorinc.com//assets/twitter-icon.svg" alt="Twitter">
+        </a>
+    </div>
+
+    <nav>
+        <a href="#" class="text-md weight-semibold color-black mr-lg">About</a>
+        <a href="#" class="text-md weight-semibold color-black mr-lg">Blog</a>
+        <a href="#" class="text-md weight-semibold color-black mr-lg">Agency</a>
+        <a href="#" class="text-md weight-semibold color-black">Contact</a>
+    </nav>
+
+    <section class="container mt-xl pt-2xl pb-xl">
+        <div class="row text-left">
+
+            <h1 class="heading-xl mb-lg block weight-semibold">Hi, I’m Gary.<img src="gary-magnone-headshot.png" class="inline-headshot">I’m a digital strategist, agency executive, and entrepeneur.</h1>
+
+            <p class="text-2xl mb-lg block">I implement content-led growth programs, optimize operational efficiency in digital agencies, and create customer-centric web experiences.</p>
+
+          </div>
+
+          <div class="row text-left mt-2xl">
+
+            <h2 class="heading-md mb-lg block weight-semibold">Here's what I'm up to</h2>
+
+            <div class="grid-2 color-cards">
+
+                <a href="https://www.magneti.com/">
+                    <div class="card" style="background-color:#edf6f7;">
+                        <img class="logo" src="magneti.png" style="width:60px; height:auto;">
+                        <h3 class="text-2xl color-black mb-sm block weight-semibold">Magneti</h3>
+                        <p class="text-lg">Digital marketing + brand agency obsessed with delivering effective and innovative growth strategy for clients.</p>
+                    </div>
+                </a>
+            
+                <a href="https://contrast.house">
+                    <div class="card" style="background-color:#fcf7f1;">
+                        <svg class="logo" style="width:50px;height:50px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <polygon points="51.2,52.5 54.3,52.5 54.3,21.6 51.2,19.4 		"/>
+                                <polygon points="29.7,52.5 29.7,4.1 27.4,2.5 0.7,21.6 0.7,25.1 26.4,6.7 26.4,13 0.7,31.3 0.7,35.4 26.4,17 26.4,23.3 0.7,41.6 
+                                    0.7,45.8 26.4,27.4 26.4,33.5 0.7,52 0.7,52.5 5.7,52.5 26.4,37.7 26.4,43.9 14.3,52.5 20,52.5 26.4,48.1 26.4,52.5 		"/>
+                                <polygon points="46.2,15.8 42.9,13.5 42.9,52.5 46.2,52.5 		"/>
+                                <polygon points="37.9,10 34.6,7.6 34.6,52.5 37.9,52.5 		"/>
+                            </g>
+                        </g>
+                        </svg>
+                        <h3 class="text-2xl color-black mb-sm block weight-semibold">Contrast House</h3>
+                        <p class="text-lg">Editorial-style listing photography & cinematic video tours that help LA’s best real estate agents sell more homes.</p>
+                    </div>
+                </a>
+
+                <a href="https://hopped.com">
+                    <div class="card" style="background-color:#edf9f5;">
+                        <svg class="logo" style="width:55px;height:55px"  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0{fill:#FFFFFF;}
+                            .st1{fill:#FFC405;}
+                            .st2{fill:#00A967;}
+                        </style>
+                        <g>
+                            <rect x="13" y="9.9" class="st0" width="26.9" height="10.4"/>
+                            <g>
+                                <polygon class="st1" points="39.9,36.5 26.4,41.3 13.2,35.3 11.3,18 42.1,18 		"/>
+                            </g>
+                            <path class="st2" d="M47.8,23.9c0-11.8-9.6-21.4-21.4-21.4C14.6,2.5,5,12.1,5,23.9c0,6,2.4,11.3,6.4,15.2h-0.1L25.1,52
+                                c0.8,0.7,1.9,0.7,2.7,0L41.5,39h-0.1C45.3,35.2,47.8,29.8,47.8,23.9z M26.4,11.5c6.8,0,12.3,5.5,12.3,12.3s-5.5,12.3-12.3,12.3
+                                s-12.3-5.5-12.3-12.3C14.1,17,19.6,11.5,26.4,11.5z"/>
+                        </g>
+                        </svg>
+                        <h3 class="text-2xl color-black mb-sm block weight-semibold">Hopped</h3>
+                        <p class="text-lg">Digital media company serving the craft beer industry in Southern California with weekly news, guides, videos, and podcasts. </p>
+                    </div>
+                </a>
+
+                <a href="https://gethighrise.com">
+                    <div class="card">
+                        <img class="logo" src="highrise.png" style="width:60px; height:auto;">
+                        <h3 class="text-2xl color-black mb-sm block weight-semibold">Highrise</h3>
+                        <p class="text-lg">Digital strategy + creative studio providing custom brand, web, and marketing solutions for clients that drive business growth.</p>
+                    </div>
+                </div>
+
+            </div>
+
+          </div>
+          <div class="row text-left mt-2xl">
+
+            <h2 class="heading-md mb-md block weight-semibold">What I'm thinking about...</h2>
+
+            <font class="text-lg mb-lg block">Here are some of my latest thoughts on marketing, strategy, entrepreneurship, and productivity.</font>
+
+            <div class="grid-3">
+                <a style="position:relative;">
+                    <p class="date-label text-sm weight-bold">2 Jan 2023</p>
+                    <img src="post-cover-1.jpg" style="width:100%; height:auto; border-radius:15px 15px 0 0;">
+                    <div class="card" style="border-radius:0 0 15px 15px">
+                        <h3 class="text-xl mb-sm block weight-semibold color-black">How to get 1% better in 2023</h3>
+                        <p class="text-md">From work and family to health and play, here’s my plan to make the most of 2023…</p>
+                    </div>
+                </a>
+                <div class="card">
+                    <h3 class="text-xl mb-sm block weight-semibold color-black">Should you auto-syndicate posts across social media platforms?</h3>
+                    <p class="text-md">In this episode, Mack and Gary talk through the pros and cons...</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl mb-sm block weight-semibold color-black">Where’s the best place to host your content?</h3>
+                    <p class="text-md">In episode 4 of The Marketing Grind, Mack and Gary talk about what you need to think about...</p>
+                </div>
+            </div>
+
+          </div>
+          <div class="row text-left mt-2xl testimonials">
+
+            <h2 class="heading-md mb-md block weight-semibold">What other people think.</h2>
+
+            <font class="text-lg mb-lg block">Of course I think I’m great. But here’s what other people think…</font>
+
+            <div class="card" style="margin-bottom:20px;">
+                <img class="testimonial" src="https://www.garymagnone.com/wp-content/uploads/2021/12/Ray-Headshot.jpg">
+                <h3 class="text-xl mb-sm block weight-semibold color-black">Ray Cameron</h3>
+                <p class="text-md">“I’ve been involved with SEO for twelve years and Gary is the best expert I’ve ever worked with. Algorithms are changing rapidly and drastically and it’s important to stay on top of the latest developments. I’ve never come across a change that Gary wasn’t already aware of. He keeps a cool head when we see fluctuations in performance, is patient to let things settle out and makes adjustments when the data tells him it is time. SEO is a long term play and we sometimes have clients get impatient, but when Gary gets to respond to the clients directly, they consistently come away with confidence that we’re on the right track and we know what we’re doing. Gary is incredibly easy to work with, a reliable teammate and an excellent communicator.”</p>
+            </div>
+            <div class="grid-2">
+
+                <div class="card">
+                    <img class="testimonial" src="https://www.garymagnone.com/wp-content/uploads/2021/12/Rob-Headshot.jpg">
+                    <h3 class="text-xl mb-sm block weight-semibold color-black">Rob Sherman</h3>
+                    <p class="text-md">“I’ve worked with Gary on many website projects of different sizes in different market segments and if I had to choose one word to describe what he provides it would be “excellence.” His academic diligence and rigor are uncommon and outstanding. His communication style is easy to understand and concise. His work is effective with stellar results. He is thorough, creative when he needs to be, and relentless about achieving consistent and compounding results for clients, which he delivers!”</p>
+                </div>
+
+                <div class="card">
+                    <img class="testimonial" src="https://www.garymagnone.com/wp-content/uploads/2021/12/Aaron-Headshot.jpg">
+                    <h3 class="text-xl mb-sm block weight-semibold color-black">Aaron Cote</h3>
+                    <p class="text-md">“Working with Gary has been a phenomenal experience. He’s an incredibly genuine guy who often goes the extra mile for his clients, his colleagues, and even for himself in the form of constant self-improvement. He’s helped me improve my digital marketing abilities tremendously. Gary is definitely somebody you want to be in contact with – whether it be for his digital marketing finesse, knowledge and appreciation of craft beer, or just because of his top-notch character.”</p>
+                </div>
+
+                <div class="card">
+                    <img class="testimonial" src="https://www.garymagnone.com/wp-content/uploads/2021/12/Brad-Headshot.jpg">
+                    <h3 class="text-xl mb-sm block weight-semibold color-black">Brad Imming</h3>
+                    <p class="text-md">“Communication with Gary has been great, it is clear that project management is one of his strengths. He gives clear deliverables and quickly responds to any questions I have. I’m looking forward to working with him on more projects in the future and would highly recommend him to anyone who is considering working with him.”</p>
+                </div>
+
+                <div class="card">
+                    <img class="testimonial" src="https://www.garymagnone.com/wp-content/uploads/2021/12/Mike-Headshot.jpg">
+                    <h3 class="text-xl mb-sm block weight-semibold color-black">Mike Garite</h3>
+                    <p class="text-md">“Gary has been an advisor on many of my major business decisions throughout the last 10 years. His decision making is cool, calm, and focused and combines elements of strong practicality and heavy analytical thinking. Gary is highly communicative, empathetic, and can deliver results with limited guidance. He turns your projects into his projects through a systematic approach that allows him to ensure the job is done well.”</p>
+                </div>
+
+                <div class="card">
+                    <img class="testimonial" src="https://www.garymagnone.com/wp-content/uploads/2021/12/Luke-Headshot-Square-280x280.jpg">
+                    <h3 class="text-xl mb-sm block weight-semibold color-black">Luke Balbirnie</h3>
+                    <p class="text-md">“I have been working with Gary for a little over 2 and a half years, and I can confidently say that he is one of the most reliable people that I have ever worked with. His dedication to his craft is immediately apparent, and he is always looking for new opportunities to refine his skill set, and deepen his knowledge.”</p>
+                </div>
+
+                <div class="card">
+                    <img class="testimonial" src="https://www.garymagnone.com/wp-content/uploads/2021/12/Josh-Headshot.jpg">
+                    <h3 class="text-xl mb-sm block weight-semibold color-black">Joshua Swanson</h3>
+                    <p class="text-md">“Gary has always been transparent with his advice, on point with his strategy, and a man of high integrity. We appreciated Gary’s honest feedback and “can-do” attitude. Had we not moved our agency out of state, we would probably still be working with Gary on continuing to innovate our digital marketing strategies.”</p>
+                </div>
+
+                
+
+
+            </div>
+
+          </div>
+    </section>
+
+</body>
+</html>
