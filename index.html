@@ -10,144 +10,11 @@
     <link href="/css/sanitize.css" rel="stylesheet" type="text/css">
     <link href="/css/minimalist-UI.css" rel="stylesheet" type="text/css">
     <link href="/css/minimalist-UI-fonts.css" rel="stylesheet" type="text/css">
+    <link href="/css/gary-magnone.css" rel="stylesheet" type="text/css">
 </head>
 
-<style>
-    p, h1, h2, h3, h4, h5, h6, font {
-        margin:0;
-    }
-    *::selection {
-        color:white;
-        background-color:black;
-    }
-    .container {
-        display:grid;
-        grid-template-rows:1fr;
-    }
-
-    .social-icons {
-        position:absolute;
-        top:25px;
-        left:25px;
-    }
-    @media(min-width:1550px) {
-        .social-icons {
-            position:fixed;
-        }
-    }
-    .social-icons a {
-        text-decoration:none;
-    }
-    .social-icons a,
-    .social-icons img {
-        width:20px;
-        filter: saturate(0%) brightness(70%) contrast(1000%);
-    }
-
-    nav {
-        position:absolute;
-        top:25px;
-        right:25px;
-    }
-    @media(min-width:1750px) {
-        nav {
-            position:fixed;
-        }
-    }
-    nav a {
-        text-decoration:none;
-    }
-    .heading-xl {
-        line-height:5rem;
-    }
-    .inline-headshot {
-        display:inline;
-        margin:0 20px;
-        width:85px;
-        height:85px;
-    }
-
-    .grid-2 {
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        width:100%;
-        column-gap:20px;
-        row-gap:20px;
-    }
-    .grid-3 {
-        display:grid;
-        grid-template-columns:1fr 1fr 1fr;
-        width:100%;
-        column-gap:20px;
-        row-gap:20px;
-    }
-    .card {
-        position:relative;
-        display:inline-block;
-        border-radius:15px;
-        padding:25px;
-        background-color:#f6f6f6;
-        cursor:pointer;
-    }
-    .color-cards .card {
-        padding:50px 25px;
-    }
-    .testimonials .card {
-        padding:35px 25px;
-    }
-
-    .date-label {
-        font-size:12px;
-        color:black !important;
-        padding:0px 10px;
-        background-color:rgba(255,255,255,0.7);
-        border-radius:1000px;
-        position:absolute;
-        top:12px;
-        left:12px;
-        backdrop-filter: blur(5px);
-    }
-
-    .darkmode {
-        background-color:black;
-    }
-    .darkmode * {
-        color:white;
-    }
-    .darkmode .text-md,
-    .darkmode .text-lg,
-    .darkmode .text-xl,
-    .darkmode .text-2xl {
-        opacity:0.8;
-    }
-    .darkmode .card .text-2xl,
-    .darkmode .card .text-xl {
-        opacity:1;
-    }
-
-    .darkmode .social-icons a,
-    .darkmode .social-icons img {
-        filter: saturate(0%) brightness(100000%) contrast(1000%);
-        opacity:0.8;
-    }
-    .darkmode .card {
-        background-color:rgba(255,255,255,0.1) !important;
-    }
-
-    .logo {
-        width:55px;
-        height:55px;
-        margin-bottom:20px;
-    }
-
-    .testimonial {
-        border-radius:1000px;
-        width:55px;
-        margin-bottom:20px;
-    }
-</style>
 	
-<body class="//darkmode">
+<body class="darkmode">
 
     <div class="social-icons">
         <a rel="noopener" href="#" target="_blank" class="mr-lg">
@@ -182,14 +49,14 @@
 
           <div class="row text-left mt-2xl">
 
-            <h2 class="heading-md mb-lg block weight-semibold">Here's what I'm up to</h2>
+            <h2 class="heading-lg mb-lg block weight-semibold">Here's what I'm up to:</h2>
 
             <div class="grid-2 color-cards">
 
                 <a href="https://www.magneti.com/">
                     <div class="card" style="background-color:#edf6f7;">
                         <img class="logo" src="/assets/magneti.png" style="width:60px; height:auto;">
-                        <h3 class="text-2xl color-black mb-sm block weight-semibold">Magneti</h3>
+                        <h3 class="heading-xs color-black mb-md mt-sm block weight-semibold">Magneti</h3>
                         <p class="text-lg">Digital marketing + brand agency obsessed with delivering effective and innovative growth strategy for clients.</p>
                     </div>
                 </a>
@@ -208,7 +75,7 @@
                             </g>
                         </g>
                         </svg>
-                        <h3 class="text-2xl color-black mb-sm block weight-semibold">Contrast House</h3>
+                        <h3 class="heading-xs color-black mb-md mt-sm block weight-semibold">Contrast House</h3>
                         <p class="text-lg">Editorial-style listing photography & cinematic video tours that help LA’s best real estate agents sell more homes.</p>
                     </div>
                 </a>
@@ -232,7 +99,7 @@
                                 s-12.3-5.5-12.3-12.3C14.1,17,19.6,11.5,26.4,11.5z"/>
                         </g>
                         </svg>
-                        <h3 class="text-2xl color-black mb-sm block weight-semibold">Hopped</h3>
+                        <h3 class="heading-xs color-black mb-md mt-sm block weight-semibold">Hopped</h3>
                         <p class="text-lg">Digital media company serving the craft beer industry in Southern California with weekly news, guides, videos, and podcasts. </p>
                     </div>
                 </a>
@@ -240,7 +107,7 @@
                 <a href="https://gethighrise.com">
                     <div class="card">
                         <img class="logo" src="/assets/highrise.png" style="width:60px; height:auto;">
-                        <h3 class="text-2xl color-black mb-sm block weight-semibold">Highrise</h3>
+                        <h3 class="heading-xs color-black mb-md mt-sm block weight-semibold">Highrise</h3>
                         <p class="text-lg">Digital strategy + creative studio providing custom brand, web, and marketing solutions for clients that drive business growth.</p>
                     </div>
                 </a>
@@ -250,15 +117,15 @@
           </div>
           <div class="row text-left mt-2xl">
 
-            <h2 class="heading-md mb-md block weight-semibold">What I'm thinking about...</h2>
+            <h2 class="heading-lg mb-md block weight-semibold">What I'm thinking about...</h2>
 
-            <font class="text-lg mb-lg block">Here are some of my latest thoughts on marketing, strategy, entrepreneurship, and productivity.</font>
+            <font class="text-xl mb-lg block">Here are some of my latest thoughts on marketing, strategy, entrepreneurship, and productivity.</font>
 
             <div class="grid-3">
 
                 <div style="position:relative;">
                     <p class="date-label text-sm weight-bold">2 Jan 2023</p>
-                    <img src="/assets/post-cover-1.jpg" style="width:100%; height:auto; border-radius:15px 15px 0 0; object-fit:cover; aspect-ratio:16/9;">
+                    <img src="/assets/post-cover-1.jpg" style="width:100%; height:auto; border-radius:15px 15px 0 0; ">
                     <div class="card" style="border-radius:0 0 15px 15px">
                         <h3 class="text-xl mb-sm block weight-semibold color-black">How to get 1% better in 2023</h3>
                         <p class="text-md">From work and family to health and play, here’s my plan to make the most of 2023…</p>
@@ -287,9 +154,9 @@
           </div>
           <div class="row text-left mt-2xl testimonials">
 
-            <h2 class="heading-md mb-md block weight-semibold">What other people think.</h2>
+            <h2 class="heading-lg mb-md block weight-semibold">What other people think.</h2>
 
-            <font class="text-lg mb-lg block">Of course I think I’m great. But here’s what other people think…</font>
+            <font class="text-xl mb-lg block">Of course I think I’m great. But here’s what other people think…</font>
 
             <div class="card" style="margin-bottom:20px;">
                 <img class="testimonial" src="https://www.garymagnone.com/wp-content/uploads/2021/12/Ray-Headshot.jpg">
@@ -340,6 +207,17 @@
             </div>
 
           </div>
+
+          <div class="row text-center mt-2xl">
+
+            <h2 class="heading-lg mb-md block weight-semibold">Contact me.</h2>
+
+           <p class="text-lg block" style="max-width:700px;
+           float:none;
+           margin-left:auto;
+           margin-right:auto;">I’m always open to discuss new projects, help solve problems, or just talk shop. Shoot me a message and let’s chat. <a>Or connect with me on LinkedIn.</a></p>
+
+       </div>
     </section>
 
     <script type="text/javascript">
