@@ -15,7 +15,7 @@
 
 /* --- Set Row Max Width --- */
 .row {
-    max-width:92%;
+    max-width:92vw;
     width:1000px;
 	display:block;
 }
@@ -67,37 +67,6 @@
     background-color:var(--body);
 }
 
-
-.text-red-50 
---tw-text-opacity: 1;
-color: rgba(254, 242, 242, var(--tw-text-opacity));	
-.text-red-100
---tw-text-opacity: 1;
-color: rgba(254, 226, 226, var(--tw-text-opacity));	
-.text-red-200
---tw-text-opacity: 1;
-color: rgba(254, 202, 202, var(--tw-text-opacity));	
-.text-red-300
---tw-text-opacity: 1;
-color: rgba(252, 165, 165, var(--tw-text-opacity));	
-.text-red-400
---tw-text-opacity: 1;
-color: rgba(248, 113, 113, var(--tw-text-opacity));	
-.text-red-500
---tw-text-opacity: 1;
-color: rgba(239, 68, 68, var(--tw-text-opacity));	
-.text-red-600
---tw-text-opacity: 1;
-color: rgba(220, 38, 38, var(--tw-text-opacity));	
-.text-red-700
---tw-text-opacity: 1;
-color: rgba(185, 28, 28, var(--tw-text-opacity));	
-.text-red-800
---tw-text-opacity: 1;
-color: rgba(153, 27, 27, var(--tw-text-opacity));	
-.text-red-900
---tw-text-opacity: 1;
-color: rgba(127, 29, 29, var(--tw-text-opacity));
 
 .color-indigo-600 {
 	color:rgb(79,70,229);
@@ -447,6 +416,22 @@ button {
 	padding-left:128px;
 }
 
+@media(max-width:767px) {
+
+	.mt-2xl {
+		margin-top:96px;
+	}
+
+	.mb-lg {
+		margin-bottom:26px;
+	}
+	.mb-xl {
+		margin-bottom:48px;
+	}
+	.mb-2xl {
+		margin-bottom:96px;
+	}
+}
 
 /* --- Grid --- */
 .grid-1 {
@@ -455,6 +440,11 @@ button {
 	grid-template-columns:1fr;
 	grid-template-rows:auto;
 }
+.grid-2 {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    width:100%;
+}
 .grid-3 {
 	display:grid;
 	width:100%;
@@ -462,13 +452,19 @@ button {
 	grid-template-rows:auto;
 }
 
-.grid-gap-30 {
-	row-gap:30px;
-	column-gap:30px;
+.grid-gap-20 {
+	row-gap:20px;
+	column-gap:20px;
 }
 
 .row-gap-30 {
-	row-gap:30px;
+	row-gap:20px;
+}
+
+@media(max-width:767px) {
+	.grid-2, .grid-3 {
+		grid-template-columns:1fr;
+	}
 }
 
 

@@ -112,6 +112,21 @@ strong {
     text-align:right;
 }
 
+/* Lists */
+ul {
+    padding-left:22px;
+    line-height:2.5rem;
+    float:left;
+    margin:0;
+}
+ul li {
+    font-size:1.125rem;
+    margin-bottom:0.75rem;
+}
+ul li:last-child {
+    margin-bottom:0;
+}
+
 
 
 
@@ -140,5 +155,68 @@ strong {
     .heading-md {
         font-size:2rem;
         line-height:2.65rem;
+    }
+}
+@media (max-width: 767px) {
+    /* Mobile */ 
+
+    /* --- Headings --- */
+    .heading-2xl {
+        font-size:3.25rem;
+        line-height:3.5rem;
+    }
+    .heading-xl {
+        font-size:2.75rem;
+        line-height:3rem;
+    }
+    .heading-lg {
+        font-size:2.25rem;
+        line-height:2.75rem;
+    }
+    .heading-md {
+        font-size:1.75rem;
+        line-height:2.25rem;
+    }
+    .heading-sm {
+        font-size:1.5rem;
+        /* font size:30px */
+        line-height:2rem;
+    }
+    .heading-xs {
+        font-size:1.25rem;
+        /* font size:24px */
+        line-height:1.75rem;
+    }
+    
+    /* --- Body Text --- */
+    .text-2xl {
+        font-size:1.125rem;
+        /* font size:20px */
+        line-height:1.8;
+    }
+    .text-xl {
+        font-size:1.125rem;
+        /* font size:20px */
+        line-height:1.65;
+    }
+    .text-lg {
+        font-size:1.125rem;
+        /* font size:18px */
+        line-height:1.65;
+    }
+    .text-md {
+        font-size:1.125rem;
+        /* font size:16px */
+        line-height:1.8rem;
+    }
+    .text-sm {
+        font-size:1rem;
+        /* font size:14px */
+        line-height:1.65rem;
+    }
+    .text-xs {
+        font-size:0.85rem;
+        /* font size:12px */
+        line-height:1.5rem;
     }
 }

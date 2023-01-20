@@ -53,16 +53,10 @@ nav a {
 }
 
 .grid-2 {
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    width:100%;
     column-gap:20px;
     row-gap:20px;
 }
 .grid-3 {
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    width:100%;
     column-gap:20px;
     row-gap:20px;
 }
@@ -103,7 +97,13 @@ nav a {
 .darkmode .text-lg,
 .darkmode .text-xl,
 .darkmode .text-2xl {
-    opacity:0.8;
+    color:rgba(255,255,255,0.8)
+}
+.darkmode ul li {
+    color:rgba(255,255,255,0.8)
+}
+.darkmode ul li::marker {
+    color:rgba(255,255,255,1)
 }
 .darkmode .card .text-2xl,
 .darkmode .card .text-xl {
@@ -129,4 +129,30 @@ nav a {
     border-radius:1000px;
     width:55px;
     margin-bottom:20px;
+}
+
+
+
+
+@media(max-width:767px) {
+    .social-icons {
+        right:25px;
+        left:auto;
+    }
+    nav {
+        right:25px;
+        top:70px;
+    }
+    .heading-xl {
+        line-height:3.5rem;
+    }
+
+    .inline-headshot {
+        width:65px;
+        height:65px;
+        margin:0 15px;
+    }
+    .home .heading-xl {
+        font-size:2.5rem
+    }
 }
