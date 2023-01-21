@@ -31,7 +31,7 @@ p, h1, h2, h3, h4, h5, h6, font {
 
 nav {
     position:absolute;
-    top:25px;
+    top:20px;
     right:25px;
 }
 @media(min-width:1750px) {
@@ -41,6 +41,7 @@ nav {
 }
 nav a {
     text-decoration:none;
+    line-height:0;
 }
 .heading-xl {
     line-height:5rem;
@@ -130,6 +131,75 @@ nav a {
     width:55px;
     margin-bottom:20px;
 }
+
+
+
+/* Blog Post */
+.blog .row {
+    width:750px;
+}
+.blog img {
+    width:1080px;
+    max-width:100vw;
+    display:block;
+    float:none;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.blog ul {
+    display:block;
+    float:left;
+    margin-bottom:16px;
+}
+
+.blog ul li {
+    line-height:1.8;
+    font-size:1.2rem;
+    color:rgb(0,0,0);
+}
+
+
+
+.post-body h2 {
+    margin-bottom:16px;
+    margin-top:48px;
+    font-size:2.25rem;
+    line-height:2.75rem;
+    display:block;
+    float:left;
+}
+
+.blog p {
+    margin-bottom:16px;
+    line-height:1.8;
+    font-size:1.2rem;
+    color:rgb(0,0,0);
+    display:block;
+    float:left;
+}
+
+.post-body u {
+    text-decoration:underline;
+    text-decoration-color: rgba(5,236,255,0.25);
+    text-underline-offset: -5px;
+    text-decoration-thickness: 10px;
+    text-decoration-skip-ink: none;
+}
+
+
+.darkmode ul li,
+.darkmode .blog p {
+    color:rgb(200,200,200);
+}
+
+.darkmode .post-body u {
+    text-decoration-color: rgba(255,255,255,1);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 3px;
+    text-decoration-skip-ink:auto;
+}
+
 
 
 

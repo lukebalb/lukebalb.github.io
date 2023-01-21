@@ -6,6 +6,9 @@
 /* --- Inter --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap');
 
+/* --- DM Serif --- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
 /* --- Set Global Font --- */
 html {
     font-family: 'Inter', sans-serif;
@@ -115,7 +118,7 @@ strong {
 /* Lists */
 ul {
     padding-left:22px;
-    line-height:2.5rem;
+    line-height:2.125rem;
     float:left;
     margin:0;
 }

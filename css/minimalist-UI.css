@@ -27,7 +27,7 @@
 	color:var(--heading);
 	font-weight:700;
 }
-.text-xl, .text-lg, .text-md, .text-sm, .text-xs {
+.text-2xl, ul, li, .text-xl, .text-lg, .text-md, .text-sm, .text-xs {
 	color:var(--body);
 	font-weight:400;
 }
