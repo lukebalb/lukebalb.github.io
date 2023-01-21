@@ -152,15 +152,11 @@ nav a {
     float:left;
     margin-bottom:16px;
 }
-
 .blog ul li {
     line-height:1.8;
     font-size:1.2rem;
     color:rgb(0,0,0);
 }
-
-
-
 .post-body h2 {
     margin-bottom:16px;
     margin-top:48px;
@@ -169,7 +165,6 @@ nav a {
     display:block;
     float:left;
 }
-
 .blog p {
     margin-bottom:16px;
     line-height:1.8;
@@ -178,7 +173,6 @@ nav a {
     display:block;
     float:left;
 }
-
 .post-body u {
     text-decoration:underline;
     text-decoration-color: rgba(5,236,255,0.25);
@@ -186,8 +180,6 @@ nav a {
     text-decoration-thickness: 10px;
     text-decoration-skip-ink: none;
 }
-
-
 .darkmode ul li,
 .darkmode .blog p {
     color:rgb(200,200,200);
@@ -224,5 +216,21 @@ nav a {
     }
     .home .heading-xl {
         font-size:2.5rem
+    }
+
+    .post-body h2 {
+        margin-bottom:12px;
+        margin-top:36px;
+        font-size:1.8rem;
+        line-height:2.4rem;
+    }
+    .blog p {
+        margin-bottom:12px;
+        line-height:1.8;
+        font-size:1.125rem;
+    }
+
+    .blog br {
+        display:none;
     }
 }
