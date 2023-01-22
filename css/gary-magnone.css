@@ -136,7 +136,7 @@ nav a:hover {
     display:inline-block;
     border-radius:15px;
     padding:25px;
-    background-color:#f6f6f6;
+    background-color:rgb(245,245,245);
     cursor:pointer;
 }
 .fullwidth-card {
@@ -192,7 +192,7 @@ nav a:hover {
 .blog ul li {
     line-height:1.8;
     font-size:1.2rem;
-    color:rgb(0,0,0);
+    color:rgb(50,50,50);
 }
 .post-body h2 {
     margin-bottom:16px;
@@ -206,7 +206,7 @@ nav a:hover {
     margin-bottom:16px;
     line-height:1.8;
     font-size:1.2rem;
-    color:rgb(0,0,0);
+    color:rgb(50,50,50);
     display:block;
     float:left;
 }
@@ -217,6 +217,9 @@ nav a:hover {
     text-decoration-thickness: 5px;
     text-decoration-skip-ink:auto;
 }
+.blog * strong {
+    color:black;
+}
 
 
 /* ----- Dark Mode ----- */
@@ -226,6 +229,9 @@ nav a:hover {
     background-color:black;
 }
 .darkmode * {
+    color:white;
+}
+.darkmode.blog * strong {
     color:white;
 }
 body.darkmode::-webkit-scrollbar {
