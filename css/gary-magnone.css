@@ -11,14 +11,54 @@ p, h1, h2, h3, h4, h5, h6, font {
 }
 body {
     overflow-x:hidden;
+    overflow-y:scroll;
     width:100vw;
     position:relative;
+    height:100vh;
 }
+/* Customize website's scrollbar like Mac OS
+Not supports in Firefox and IE */
+
+/* total width */
+body::-webkit-scrollbar {
+    background-color: white;
+    width: 10px;
+}
+
+/* background of the scrollbar except button or resizer */
+body::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+/* scrollbar itself */
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(215,215,215);
+}
+
+/* set button(top and bottom of the scrollbar) */
+body::-webkit-scrollbar-button {
+    display:none;
+}
+
+body.darkmode::-webkit-scrollbar {
+    background-color: black;
+    width: 10px;
+}
+body.darkmode::-webkit-scrollbar-track {
+    background-color: black
+}
+body.darkmode::-webkit-scrollbar-thumb {
+    background-color: rgb(60,60,60);
+}
+
+
+
+
 
 .social-icons {
     position:absolute;
-    top:25px;
-    left:25px;
+    top:30px;
+    right:35px;
 }
 @media(min-width:1550px) {
     .social-icons {
@@ -36,8 +76,15 @@ body {
 
 nav {
     position:absolute;
-    top:20px;
-    right:4vw;
+    top:28px;
+    right:0;
+    left:0;
+    margin-left:auto;
+    margin-right:auto;
+    width:350px;
+    display:inline-flex;
+    justify-content:space-around;
+    
 }
 @media(min-width:1750px) {
     nav {
@@ -45,8 +92,15 @@ nav {
     }
 }
 nav a {
-    text-decoration:none;
-    line-height:0;
+    text-decoration:underline;
+    text-decoration-color: rgba(5,236,255,0);
+    text-underline-offset: 5px;
+    text-decoration-thickness: 3px;
+    text-decoration-skip-ink: none;
+    transition:all .5s ease;
+}
+nav a:hover {
+    text-decoration-color: rgba(5,236,255,0.4);
 }
 
 .menu-icon {
@@ -194,10 +248,10 @@ nav a {
 }
 .post-body u {
     text-decoration:underline;
-    text-decoration-color: rgba(5,236,255,0.25);
-    text-underline-offset: -5px;
-    text-decoration-thickness: 10px;
-    text-decoration-skip-ink: none;
+    text-decoration-color: rgba(5,236,255,0.4);
+    text-underline-offset: 5px;
+    text-decoration-thickness: 5px;
+    text-decoration-skip-ink:auto;
 }
 .darkmode ul li,
 .darkmode .blog p {
@@ -206,14 +260,47 @@ nav a {
 
 .darkmode .post-body u {
     text-decoration-color: rgba(255,255,255,1);
-    text-underline-offset: 3px;
-    text-decoration-thickness: 3px;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
     text-decoration-skip-ink:auto;
+}
+.gm-logo {
+    font-family:'DM Serif';
+    text-align:center;
+    display:inline-block;
+    width:auto;
+    position:absolute;
+    opacity:1color:black;
+}
+.gm-logo a {
+    color:black;
+    opacity:1;
+}
+.darkmode .gm-logo a {
+    color:white;
 }
 
 
+@media(min-width:768px) {
 
+    .gm-logo {
+        top:32px;
+        left:25px;
+        font-size:48px;
+        width:100px;
+        text-align:center;
+        display:inline-block;
+        width:auto;
+        position:absolute;
+    }
+    .gm-logo a {
+        color:black;
+    }
+    .darkmode .gm-logo a {
+        color:white;
+    }
 
+}
 
 @media(max-width:767px) {
     
