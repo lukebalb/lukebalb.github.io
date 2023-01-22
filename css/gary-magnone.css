@@ -440,6 +440,7 @@ body.darkmode::-webkit-scrollbar-thumb {
 
     .card {
         border-radius:15px;
+        padding:20px;
     }
     .color-cards .card,
     .testimonials .card {
@@ -464,11 +465,15 @@ body.darkmode::-webkit-scrollbar-thumb {
         font-size:2.5rem
     }
 
+    .blog h1 {
+        font-size:2.25rem;
+        line-height:3rem;
+    }
     .post-body h2 {
         margin-bottom:12px;
         margin-top:36px;
-        font-size:1.8rem;
-        line-height:2.4rem;
+        font-size:2rem;
+        line-height:2.5rem;
     }
     .blog p {
         margin-bottom:12px;
