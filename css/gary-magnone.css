@@ -57,16 +57,16 @@ body.darkmode::-webkit-scrollbar-thumb {
 
 .social-icons {
     position:absolute;
-    top:30px;
+    bottom:24px;
     right:35px;
 }
-@media(min-width:1550px) {
-    .social-icons {
-        position:fixed;
-    }
-}
+
 .social-icons a {
     text-decoration:none;
+    margin-right:35px;
+}
+.social-icons a:last-child {
+    margin-right:0;
 }
 .social-icons a,
 .social-icons img {
@@ -76,31 +76,29 @@ body.darkmode::-webkit-scrollbar-thumb {
 
 nav {
     position:absolute;
-    top:28px;
-    right:0;
-    left:0;
-    margin-left:auto;
-    margin-right:auto;
+    bottom:20px;
+    left:130px;
     width:350px;
     display:inline-flex;
     justify-content:space-around;
     
 }
-@media(min-width:1750px) {
-    nav {
-        position:fixed;
-    }
-}
+
 nav a {
     text-decoration:underline;
     text-decoration-color: rgba(5,236,255,0);
-    text-underline-offset: 5px;
-    text-decoration-thickness: 3px;
-    text-decoration-skip-ink: none;
+    text-underline-offset: 6px;
+    text-decoration-thickness:2px;
+    text-decoration-skip-ink: auto;
     transition:all .5s ease;
+    color:rgb(40,40,40) !important;
+    font-weight:500 !important;
 }
 nav a:hover {
-    text-decoration-color: rgba(5,236,255,0.4);
+    text-decoration-color: rgba(0,0,0,0.1);
+}
+.darkmode nav a:hover {
+    text-decoration-color: rgba(255,255,255,0.5);
 }
 
 .menu-icon {
@@ -181,16 +179,16 @@ nav a:hover {
 }
 
 .darkmode nav a {
-    color:white;
+    color:white !important;;
 }
 
 .darkmode .social-icons a,
 .darkmode .social-icons img {
     filter: saturate(0%) brightness(100000%) contrast(1000%);
-    opacity:0.9;
+    opacity:1;
 }
 .darkmode .card {
-    background-color:rgb(25,25,25) !important;
+    background-color:rgb(20,20,20) !important;
 }
 
 .logo {
@@ -259,9 +257,9 @@ nav a:hover {
 }
 
 .darkmode .post-body u {
-    text-decoration-color: rgba(255,255,255,1);
-    text-underline-offset: 2px;
-    text-decoration-thickness: 2px;
+    text-decoration-color: rgba(255,255,255,0.6);
+    text-underline-offset: 5px;
+    text-decoration-thickness: 3px;
     text-decoration-skip-ink:auto;
 }
 .gm-logo {
@@ -270,7 +268,8 @@ nav a:hover {
     display:inline-block;
     width:auto;
     position:absolute;
-    opacity:1color:black;
+    opacity:1;
+    color:black;
 }
 .gm-logo a {
     color:black;
@@ -284,7 +283,7 @@ nav a:hover {
 @media(min-width:768px) {
 
     .gm-logo {
-        top:32px;
+        bottom:40px;
         left:25px;
         font-size:48px;
         width:100px;
@@ -298,6 +297,25 @@ nav a:hover {
     }
     .darkmode .gm-logo a {
         color:white;
+    }
+
+    .off-canvas {
+        width:100vw;
+        height:600px;
+        position:fixed;
+        top:-530px;
+        left:0;
+        transition:top .5s ease;
+        display:block;
+        float:left;
+        backdrop-filter:blur(10px);
+        background-color:rgba(255,255,255,0.3);
+        border-bottom:1px solid rgba(0,0,0,0.1);
+        z-index:10;
+    }
+    .darkmode .off-canvas {
+        background-color:rgba(0,0,0,0.15);
+        border-bottom:1px solid rgba(255,255,255,0.1);
     }
 
 }
