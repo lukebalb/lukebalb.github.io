@@ -278,8 +278,8 @@ nav a {
         display:block;
         float:left;
         backdrop-filter:blur(10px);
-        background-color:rgba(0,0,0,0.2);
-        border-bottom:2px solid rgba(255,255,255,0.1);
+        background-color:rgba(0,0,0,0.15);
+        border-bottom:1px solid rgba(255,255,255,0.1);
     }
 
     .off-canvas.active {
