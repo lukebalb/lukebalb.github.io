@@ -2,6 +2,9 @@
 p, h1, h2, h3, h4, h5, h6, font {
     margin:0;
 }
+h1,h2 {
+    font-weight:700 !important;
+}
 *::selection {
     color:white;
     background-color:black;
@@ -466,7 +469,7 @@ body.darkmode::-webkit-scrollbar-thumb {
         margin:0 10px;
     }
     .home .heading-xl {
-        font-size:2.25rem;
+        font-size:2.125rem;
         line-height:3.125rem;
         font-weight:700 !important;
         
