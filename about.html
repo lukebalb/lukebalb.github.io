@@ -76,7 +76,7 @@
 
         <div class="row text-left mt-2xl">
 
-             <h2 class="heading-lg mb-lg block weight-semibold">Where I’m coming from.</h2>
+             <h2 class="heading-lg mb-lg block weight-semibold">Where I’m <br class="mobile">coming from.</h2>
 
             <p class="text-lg mb-md block">My professional marketing journey started in SEO, where the primary channel objective for the last 20 years has been to create web content that Google features highly in its organic search results.</p>
             <p class="text-lg mb-md block">Along the way, I realized that content shouldn’t be created just so that it can rank in Google. No, truly effective content strategy needs to be crafted with the audience at the heart of it, with empathy for their pain points and challenges, and a message that resonates long after they’ve left the page.</p>
@@ -86,9 +86,9 @@
 
         <div class="row text-left mt-xl">
 
-            <h2 class="heading-lg mb-lg block weight-semibold">Here's what I'm up to:</h2>
+            <h2 class="heading-lg mb-lg block weight-semibold">Here's what <br class="mobile">I'm up to.</h2>
 
-            <div class="color-cards" style="row-gap:20px; display:grid; grid-template-columns:1fr; width:100%">
+            <div class="color-cards grid-1">
 
                 <a href="https://www.magneti.com/">
                     <div class="card" style="background-color:#edf6f7;">
@@ -163,12 +163,23 @@
     </main>
 
     <script type="text/javascript">
-        /* const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-        if (prefersDarkScheme.matches) {
-            document.body.classList.add('darkmode');
-        } else {  
-            document.body.classList.remove('darkmode');
-        } */
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+       if (prefersDarkScheme.matches) {
+           document.body.classList.add('darkmode');
+       } else {  
+           document.body.classList.remove('darkmode');
+       }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $( ".menu-icon" ).click(function() {
+            $(this).toggleClass('active');
+            $('.off-canvas').toggleClass('active');
+        });
+        $( "nav a" ).click(function() {
+            $('.off-canvas').removeClass('active');
+        });
+    
     </script>
 
 </body>

@@ -17,6 +17,10 @@ body {
     position:relative;
     height:100vh;
 }
+.grid-1 {
+    column-gap:20px;
+    row-gap:20px;
+}
 .grid-2 {
     column-gap:20px;
     row-gap:20px;
@@ -24,6 +28,12 @@ body {
 .grid-3 {
     column-gap:20px;
     row-gap:20px;
+}
+.mobile {
+    display:none;
+}
+.desktop {
+    display:inline-block;
 }
 
 
@@ -129,6 +139,9 @@ nav a:hover {
     background-color:#f6f6f6;
     cursor:pointer;
 }
+.fullwidth-card {
+    margin-bottom:20px;
+}
 .color-cards .card {
     padding:50px 25px;
 }
@@ -230,18 +243,16 @@ body.darkmode::-webkit-scrollbar-thumb {
 .darkmode .text-md,
 .darkmode .text-lg,
 .darkmode .text-xl,
-.darkmode .text-2xl {
-    color:rgba(255,255,255,0.8)
-}
+.darkmode .text-2xl,
 .darkmode ul li {
-    color:rgba(255,255,255,0.8)
+    color:rgb(205,205,205)
 }
 .darkmode ul li::marker {
     color:rgba(255,255,255,1)
 }
 .darkmode .card .text-2xl,
 .darkmode .card .text-xl {
-    opacity:1;
+    color:white;
 }
 
 /* Nav menu */
@@ -310,7 +321,18 @@ body.darkmode::-webkit-scrollbar-thumb {
 }
 
 @media(max-width:767px) {
-    
+    .mobile {
+        display:inline-block;
+    }
+    .desktop {
+        display:none;
+    }
+    .grid-1,
+    .grid-2,
+    .grid-3 {
+        column-gap:2vw;
+        row-gap:2vw;
+    }
 
     .menu-icon {
         position:fixed;
@@ -321,6 +343,7 @@ body.darkmode::-webkit-scrollbar-thumb {
         justify-content:space-between;
         flex-direction:column;
         cursor:pointer;
+        z-index:11;
     }
     .menu-icon div {
         display:inline-block;
@@ -378,6 +401,7 @@ body.darkmode::-webkit-scrollbar-thumb {
         backdrop-filter:blur(12px);
         background-color:rgba(255,255,255,0.3);
         border-bottom:1px solid rgba(0,0,0,0.1);
+        z-index:10;
     }
 
     .darkmode .off-canvas {
@@ -408,8 +432,17 @@ body.darkmode::-webkit-scrollbar-thumb {
         left:4vw;
     }
 
-
-
+    .card {
+        border-radius:15px;
+    }
+    .color-cards .card,
+    .testimonials .card {
+        width:96vw;
+        margin-left:-2vw;
+    }
+    .fullwidth-card {
+        margin-bottom:15px;
+    }
 
 
     .heading-xl {
@@ -436,8 +469,8 @@ body.darkmode::-webkit-scrollbar-thumb {
         line-height:1.8;
         font-size:1.125rem;
     }
-
-    .blog br {
-        display:none;
+    .blog ul li {
+        font-size:1.125rem;
     }
+
 }

@@ -88,7 +88,7 @@
         <img src="https://www.garymagnone.com/wp-content/uploads/2023/01/joshua-earle-ICE__bo2Vws-unsplash-scaled-1620x1080.jpg">
 
         <div class="post-body mt-lg row text-left">
-            <h2>Work on less, go deep on more.</h2>
+            <h2>Work on less, <br class="mobile">go deep on more.</h2>
             <p>Since COVID hit, I’ve been all over the place with work, saying yes to every opportunity that comes up. Turns out, if you’re focusing on everything, you’re focusing on nothing.</p>
             <p>This year, I’m channeling my work energy into three areas:</p>
             <ul>
@@ -102,7 +102,7 @@
             <p>Well, since the baby, I’ve done a terrible job of putting this advice into action. I’ve realized that date nights are not just a “nice to have” and that there’s an exponentially positive impact of maintaining an element of romantic thoughtfulness and surprise.</p>
             <p>I’ll be planning at least two date nights per month with the goal of ramping up as we figure it out with our schedules.</p>
 
-            <h2>Create more life adventures.</h2>
+            <h2>Create more <br class="mobile">life adventures.</h2>
             <p>I use the word adventure here pretty loosely. Basically, I haven’t fully emerged from my pandemic bubble. And because Molly was a pandemic baby, that’s kind of carried over to her. Here’s how we change that:</p>
             <ul>
                 <li>One toddler-friendly activity to do around LA with Molly and Caroline each week. Museums, parks, live music, long drives, walks and hikes, exploring, shopping, and playing are all on the table here.</li>
@@ -120,7 +120,7 @@
                 <li>I’ll also continue my schedule of 3 HIIT workouts and 2 strength training sessions per week with Arena Fitness.</li>
             </ul>
 
-            <h2>Bring credit card balance to 0.</h2>
+            <h2>Bring credit card <br class="mobile">balance to 0.</h2>
             <p>I’ve had a pretty poor relationship with finances and debt since college, and as a self-employed consultant with no guaranteed paycheck, I’ve carried some of these poor habits with me, leaning on credit unnecessarily and storing cash reserves like a squirrel hoards nuts for the winter.</p>
             <p>This year I plan to completely re-write the way I manage my finances with proper budgeting, smarter and more active investing, and keeping all lines of credit paid up monthly.</p>
 
@@ -129,7 +129,7 @@
             <p>I’ll be researching online guitar training programs that will keep me accountable to playing, force me to expand my skill set, and keep me active in a creative outlet that at one point was a massive part of my identity.</p>
             <p>If I see some traction here over the first half of the year, I’ll let myself invest in some new/upgraded gear and maybe next year’s list will have starting a band on it!</p>
 
-            <h2>Give myself the grace to pivot,<br> <u>but not give up</u>.</h2>
+            <h2>Give myself the grace to pivot,<br class="desktop"> <u>but not give up</u>.</h2>
             <p>Creating behavioral change is hard. It requires willpower and discipline and motivation, all of which are finite resources that can burn out quickly.</p>
             <p>In 2022, I learned a lot about experimenting with micro goals, taking tiny actions, and tracking progress with the intent of building small habits that lead to the changes I’m looking to make.</p>
             <p>Hiccups, missteps, and burnout are inevitable when embarking on any growth program, so I’ll build in the expectation that these things can happen and that I can turn it back around with my very next action.</p>
@@ -139,11 +139,22 @@
 
 </body>
 
+<script type="text/javascript">
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+   if (prefersDarkScheme.matches) {
+       document.body.classList.add('darkmode');
+   } else {  
+       document.body.classList.remove('darkmode');
+   }
+</script>
 <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 <script type="text/javascript">
     $( ".menu-icon" ).click(function() {
         $(this).toggleClass('active');
         $('.off-canvas').toggleClass('active');
+    });
+    $( "nav a" ).click(function() {
+        $('.off-canvas').removeClass('active');
     });
 
 </script>
