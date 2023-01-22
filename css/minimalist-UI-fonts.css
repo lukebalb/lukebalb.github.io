@@ -140,6 +140,11 @@ ul li {
 ul li:last-child {
     margin-bottom:0;
 }
+@media(max-width:767px) {
+    ul {
+        padding-left:18px;
+    }
+}
 
 
 
@@ -180,12 +185,12 @@ ul li:last-child {
         line-height:3.5rem;
     }
     .heading-xl {
-        font-size:2.75rem;
+        font-size:2.625rem;
         line-height:3rem;
     }
     .heading-lg {
-        font-size:2.25rem;
-        line-height:2.75rem;
+        font-size:2rem;
+        line-height:2.5rem;
     }
     .heading-md {
         font-size:1.75rem;
