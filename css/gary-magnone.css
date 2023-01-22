@@ -1,3 +1,4 @@
+/* General Utilities */
 p, h1, h2, h3, h4, h5, h6, font {
     margin:0;
 }
@@ -16,44 +17,34 @@ body {
     position:relative;
     height:100vh;
 }
-/* Customize website's scrollbar like Mac OS
-Not supports in Firefox and IE */
+.grid-2 {
+    column-gap:20px;
+    row-gap:20px;
+}
+.grid-3 {
+    column-gap:20px;
+    row-gap:20px;
+}
 
-/* total width */
+
+/* Custom Scrollbar */
+
 body::-webkit-scrollbar {
     background-color: white;
     width: 10px;
 }
-
-/* background of the scrollbar except button or resizer */
 body::-webkit-scrollbar-track {
     background-color: white;
 }
-
-/* scrollbar itself */
 body::-webkit-scrollbar-thumb {
     background-color: rgb(215,215,215);
 }
-
-/* set button(top and bottom of the scrollbar) */
 body::-webkit-scrollbar-button {
     display:none;
 }
 
-body.darkmode::-webkit-scrollbar {
-    background-color: black;
-    width: 10px;
-}
-body.darkmode::-webkit-scrollbar-track {
-    background-color: black
-}
-body.darkmode::-webkit-scrollbar-thumb {
-    background-color: rgb(60,60,60);
-}
 
-
-
-
+/* Social Icons */
 
 .social-icons {
     position:absolute;
@@ -74,6 +65,8 @@ body.darkmode::-webkit-scrollbar-thumb {
     filter: saturate(0%) brightness(70%) contrast(1000%);
 }
 
+
+/* Nav Menu */
 nav {
     position:absolute;
     bottom:20px;
@@ -83,7 +76,6 @@ nav {
     justify-content:space-around;
     
 }
-
 nav a {
     text-decoration:underline;
     text-decoration-color: rgba(5,236,255,0);
@@ -96,18 +88,32 @@ nav a {
 nav a:hover {
     text-decoration-color: rgba(0,0,0,0.1);
 }
-.darkmode nav a:hover {
-    text-decoration-color: rgba(255,255,255,0.5);
-}
-
 .menu-icon {
     display:none;
 }
 
+/* Site Logo */
+.gm-logo {
+    font-family:'DM Serif';
+    text-align:center;
+    display:inline-block;
+    width:auto;
+    position:absolute;
+    opacity:1;
+    color:black;
+    font-weight:600;
+    letter-spacing:-3px
+}
+.gm-logo a {
+    color:black;
+    opacity:1;
+}
+.gm-logo a {
+    color:black;
+}
 
 
-
-
+/* Home Banner */
 
 .heading-xl {
     line-height:5rem;
@@ -119,14 +125,8 @@ nav a:hover {
     height:85px;
 }
 
-.grid-2 {
-    column-gap:20px;
-    row-gap:20px;
-}
-.grid-3 {
-    column-gap:20px;
-    row-gap:20px;
-}
+
+/* Cards */
 .card {
     position:relative;
     display:inline-block;
@@ -138,10 +138,21 @@ nav a:hover {
 .color-cards .card {
     padding:50px 25px;
 }
+.logo {
+    width:55px;
+    height:55px;
+    margin-bottom:20px;
+}
 .testimonials .card {
     padding:35px 25px;
 }
+.testimonial {
+    border-radius:1000px;
+    width:55px;
+    margin-bottom:20px;
+}
 
+/* Post Date */
 .date-label {
     font-size:12px;
     color:black !important;
@@ -153,56 +164,6 @@ nav a:hover {
     left:12px;
     backdrop-filter: blur(5px);
 }
-
-.darkmode {
-    background-color:black;
-}
-.darkmode * {
-    color:white;
-}
-.darkmode .text-md,
-.darkmode .text-lg,
-.darkmode .text-xl,
-.darkmode .text-2xl {
-    color:rgba(255,255,255,0.8)
-}
-.darkmode ul li {
-    color:rgba(255,255,255,0.8)
-}
-.darkmode ul li::marker {
-    color:rgba(255,255,255,1)
-}
-.darkmode .card .text-2xl,
-.darkmode .card .text-xl {
-    opacity:1;
-}
-
-.darkmode nav a {
-    color:white !important;;
-}
-
-.darkmode .social-icons a,
-.darkmode .social-icons img {
-    filter: saturate(0%) brightness(100000%) contrast(1000%);
-    opacity:1;
-}
-.darkmode .card {
-    background-color:rgb(20,20,20) !important;
-}
-
-.logo {
-    width:55px;
-    height:55px;
-    margin-bottom:20px;
-}
-
-.testimonial {
-    border-radius:1000px;
-    width:55px;
-    margin-bottom:20px;
-}
-
-
 
 /* Blog Post */
 .blog .row {
@@ -216,7 +177,6 @@ nav a:hover {
     margin-left:auto;
     margin-right:auto;
 }
-
 .blog ul {
     display:block;
     float:left;
@@ -250,35 +210,83 @@ nav a:hover {
     text-decoration-thickness: 5px;
     text-decoration-skip-ink:auto;
 }
+
+
+/* ----- Dark Mode ----- */
+
+/* Body */
+.darkmode {
+    background-color:black;
+}
+.darkmode * {
+    color:white;
+}
+body.darkmode::-webkit-scrollbar {
+    background-color: black;
+    width: 10px;
+}
+body.darkmode::-webkit-scrollbar-track {
+    background-color: black
+}
+body.darkmode::-webkit-scrollbar-thumb {
+    background-color: rgb(60,60,60);
+}
+
+/* Text */
+.darkmode .text-md,
+.darkmode .text-lg,
+.darkmode .text-xl,
+.darkmode .text-2xl {
+    color:rgba(255,255,255,0.8)
+}
+.darkmode ul li {
+    color:rgba(255,255,255,0.8)
+}
+.darkmode ul li::marker {
+    color:rgba(255,255,255,1)
+}
+.darkmode .card .text-2xl,
+.darkmode .card .text-xl {
+    opacity:1;
+}
+
+/* Nav menu */
+.darkmode nav a {
+    color:white !important;;
+}
+.darkmode nav a:hover {
+    text-decoration-color: rgba(255,255,255,0.5);
+}
+
+/* Social icons */
+.darkmode .social-icons a,
+.darkmode .social-icons img {
+    filter: saturate(0%) brightness(100000%) contrast(1000%);
+    opacity:1;
+}
+
+/* Site Logo */
+.darkmode .gm-logo a {
+    color:white;
+}
+
+/* Cards */
+.darkmode .card {
+    background-color:rgb(20,20,20) !important;
+}
+
+/* Blog post */
 .darkmode ul li,
 .darkmode .blog p {
     color:rgb(200,200,200);
 }
-
 .darkmode .post-body u {
     text-decoration-color: rgba(255,255,255,0.6);
     text-underline-offset: 5px;
     text-decoration-thickness: 3px;
     text-decoration-skip-ink:auto;
 }
-.gm-logo {
-    font-family:'DM Serif';
-    text-align:center;
-    display:inline-block;
-    width:auto;
-    position:absolute;
-    opacity:1;
-    color:black;
-    font-weight:600;
-    letter-spacing:-3px
-}
-.gm-logo a {
-    color:black;
-    opacity:1;
-}
-.darkmode .gm-logo a {
-    color:white;
-}
+
 
 
 @media(min-width:768px) {
@@ -293,13 +301,6 @@ nav a:hover {
         width:auto;
         position:absolute;
     }
-    .gm-logo a {
-        color:black;
-    }
-    .darkmode .gm-logo a {
-        color:white;
-    }
-
     .off-canvas {
         width:100vw;
         height:600px;
