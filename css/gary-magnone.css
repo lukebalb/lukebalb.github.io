@@ -467,7 +467,8 @@ body.darkmode::-webkit-scrollbar-thumb {
 
     .blog h1 {
         font-size:2.25rem;
-        line-height:3rem;
+        line-height:2.825rem;
+        font-weight:700 !important;
     }
     .post-body h2 {
         margin-bottom:12px;
