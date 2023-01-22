@@ -380,7 +380,7 @@ button {
 @media(max-width:767px) {
 
 	.mt-2xl {
-		margin-top:96px;
+		margin-top:64px;
 	}
 
 	.mb-lg {
@@ -390,7 +390,7 @@ button {
 		margin-bottom:48px;
 	}
 	.mb-2xl {
-		margin-bottom:96px;
+		margin-bottom:64px;
 	}
 
 	.pt-lg {

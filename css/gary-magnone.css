@@ -108,7 +108,7 @@ nav a:hover {
     width:auto;
     position:absolute;
     opacity:1;
-    width:60px
+    width:54px
 }
 .gm-logo a {
     color:black;
@@ -303,7 +303,7 @@ body.darkmode::-webkit-scrollbar-thumb {
 @media(min-width:768px) {
 
     .gm-logo {
-        bottom:13px;
+        bottom:16px;
         left:25px;
         position:absolute;
     }
@@ -338,6 +338,10 @@ body.darkmode::-webkit-scrollbar-thumb {
     .grid-3 {
         column-gap:2vw;
         row-gap:2vw;
+    }
+
+    .grid-3 {
+        row-gap:20px;
     }
 
     .menu-icon {
@@ -434,7 +438,7 @@ body.darkmode::-webkit-scrollbar-thumb {
 
     .gm-logo {
         position:absolute;
-        bottom:14px;
+        bottom:16px;
         left:4vw;
     }
 
@@ -462,7 +466,8 @@ body.darkmode::-webkit-scrollbar-thumb {
         margin:0 15px;
     }
     .home .heading-xl {
-        font-size:2.5rem
+        font-size:2.25rem;
+        
     }
 
     .blog h1 {
