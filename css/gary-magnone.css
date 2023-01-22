@@ -301,12 +301,10 @@ body.darkmode::-webkit-scrollbar-thumb {
         float:left;
         backdrop-filter:blur(10px);
         background-color:rgba(255,255,255,0.3);
-        border-bottom:1px solid rgba(0,0,0,0);
         z-index:10;
     }
     .darkmode .off-canvas {
         background-color:rgba(0,0,0,0.15);
-        border-bottom:1px solid rgba(255,255,255,0.1);
     }
 
 }
