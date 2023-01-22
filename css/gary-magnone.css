@@ -459,9 +459,6 @@ body.darkmode::-webkit-scrollbar-thumb {
     }
 
 
-    .heading-xl {
-        line-height:3.5rem;
-    }
 
     .inline-headshot {
         width:55px;
@@ -472,6 +469,9 @@ body.darkmode::-webkit-scrollbar-thumb {
         font-size:2rem;
         line-height:3.125rem;
         font-weight:700 !important;
+    }
+    .heading-lg {
+        font-size:1.825rem;
     }
 
     .blog h1 {
