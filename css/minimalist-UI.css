@@ -431,6 +431,16 @@ button {
 	.mb-2xl {
 		margin-bottom:96px;
 	}
+
+	.pt-lg {
+		padding-top:26px;
+	}
+	.pt-xl {
+		padding-top:48px;
+	}
+	.pt-2xl {
+		padding-top:96px;
+	}
 }
 
 /* --- Grid --- */

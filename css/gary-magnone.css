@@ -91,7 +91,6 @@ nav a {
     text-decoration-thickness:2px;
     text-decoration-skip-ink: auto;
     transition:all .5s ease;
-    color:rgb(40,40,40) !important;
     font-weight:500 !important;
 }
 nav a:hover {
@@ -263,13 +262,15 @@ nav a:hover {
     text-decoration-skip-ink:auto;
 }
 .gm-logo {
-    font-family:'DM Serif';
+    font-family:'Inter';
     text-align:center;
     display:inline-block;
     width:auto;
     position:absolute;
     opacity:1;
     color:black;
+    font-weight:600;
+    letter-spacing:-3px
 }
 .gm-logo a {
     color:black;
@@ -283,9 +284,9 @@ nav a:hover {
 @media(min-width:768px) {
 
     .gm-logo {
-        bottom:40px;
+        bottom:38px;
         left:25px;
-        font-size:48px;
+        font-size:40px;
         width:100px;
         text-align:center;
         display:inline-block;
@@ -310,7 +311,7 @@ nav a:hover {
         float:left;
         backdrop-filter:blur(10px);
         background-color:rgba(255,255,255,0.3);
-        border-bottom:1px solid rgba(0,0,0,0.1);
+        border-bottom:1px solid rgba(0,0,0,0);
         z-index:10;
     }
     .darkmode .off-canvas {
@@ -393,6 +394,7 @@ nav a:hover {
     .social-icons {
         left:4vw;
         top:auto;
+        right:auto;
         bottom:185px;
     }
     nav {
