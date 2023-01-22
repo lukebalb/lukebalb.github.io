@@ -21,29 +21,39 @@
 
 <body class="darkmode">
 
-    <div class="social-icons">
-        <a rel="noopener" href="#" target="_blank" class="mr-lg">
-            <img src="/assets/facebook-icon.svg" alt="Facebook">
-        </a>
-        <a rel="noopener" href="#" target="_blank" class="mr-lg">
-            <img src="/assets/instagram-icon.svg" alt="Instagram">
-        </a>
-        <a rel="noopener" href="#" target="_blank" class="mr-lg">
-            <img src="/assets/linkedin-icon.svg" alt="LinkedIn">
-        </a>
-        <a rel="noopener" href="#" target="_blank">
-            <img src="/assets/twitter-icon.svg" alt="Twitter">
-        </a>
+    <div class="off-canvas active">
+        <div class="social-icons">
+            <a rel="noopener" href="#" target="_blank" class="mr-lg">
+                <img src="/assets/facebook-icon.svg" alt="Facebook">
+            </a>
+            <a rel="noopener" href="#" target="_blank" class="mr-lg">
+                <img src="/assets/instagram-icon.svg" alt="Instagram">
+            </a>
+            <a rel="noopener" href="#" target="_blank" class="mr-lg">
+                <img src="/assets/linkedin-icon.svg" alt="LinkedIn">
+            </a>
+            <a rel="noopener" href="#" target="_blank">
+                <img src="/assets/twitter-icon.svg" alt="Twitter">
+            </a>
+        </div>
+    
+        <nav>
+            <a href="/about" class="text-md weight-semibold color-black mr-lg">About</a>
+            <a href="/blog" class="text-md weight-semibold color-black mr-lg">Blog</a>
+            <a href="/agency" class="text-md weight-semibold color-black mr-lg">Agency</a>
+            <a href="#contact" class="text-md weight-semibold color-black">Contact</a>
+        </nav>
     </div>
 
-    <nav>
-        <a href="/about" class="text-md weight-semibold color-black mr-lg">About</a>
-        <a href="/blog" class="text-md weight-semibold color-black mr-lg">Blog</a>
-        <a href="/agency" class="text-md weight-semibold color-black mr-lg">Agency</a>
-        <a href="#contact" class="text-md weight-semibold color-black">Contact</a>
-    </nav>
+    <div class="menu-icon active">
 
-    <main class="blog container mt-xl pt-2xl pb-xl text-center">
+        <div></div>
+        <div></div>
+
+    </div>
+
+
+    <main class="blog container pt-2xl pb-xl text-center">
 
 
         <div class="row text-left mb-lg">
@@ -106,5 +116,14 @@
     </main>
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $( ".menu-icon" ).click(function() {
+        $(this).toggleClass('active');
+        $('.off-canvas').toggleClass('active');
+    });
+
+</script>
 
 </html>
