@@ -214,9 +214,9 @@ ul li:last-child {
         line-height:1.8;
     }
     .text-xl {
-        font-size:1.25rem;
+        font-size:1.125rem;
         /* font size:20px */
-        line-height:1.5;
+        line-height:1.65;
     }
     .text-lg {
         font-size:1.125rem;
