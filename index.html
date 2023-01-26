@@ -1,273 +1,245 @@
 <!doctype html>
 <html lang="en-US">
-	
+    
 <head>
-    <meta name="description" content="Minimalist UI Kit">
+    <meta name="description" content="Logo Demo">
     <meta name="robots" content="noindex">
-    <title>Gary Magnone</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3">
-
+    <title>Logo Demo</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3">
 
     <link href="/css/sanitize.css" rel="stylesheet" type="text/css">
     <link href="/css/minimalist-UI.css" rel="stylesheet" type="text/css">
     <link href="/css/minimalist-UI-fonts.css" rel="stylesheet" type="text/css">
-    <link href="/css/gary-magnone.css" rel="stylesheet" type="text/css">
 </head>
 
+<style>
+body {
+    background-color:black;
+    transition:background-color .5s ease;
+}
+
+/* Buttons */
+button {
+    display:inline-flex;
+    align-items:center;
+    justify-content: center;
+    text-align:center;
+    height:40px;
+    font-size:14px;
+    font-weight:600;
+    color:white;
+    border-radius:5px;
+    border:1px solid rgba(255,255,255,0.4);
+    background-color:rgba(255,255,255,0.1);
+    transition:all .5s ease;
+}
+button.active {
+    background-color:rgba(255,255,255,0.5);
+}
+
+/* --- Icon Section --- */
+.icon--picker {
+    position:absolute;
+    top:24px;
+    left:24px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    column-gap:15px;
+}
+.icon {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    opacity:0;
+    transition:opacity .5s ease;
+}
+.icon.active {
+    opacity:1;
+}
+.icon svg {
+    width:125px;
+    height:auto;
+    transition:color .5s ease;
+}
+.icon--picker button {
+    width:65px;
+}
+
+/* --- Color Section --- */
+.color--picker {
+    position:absolute;
+    bottom:24px;
+    left:24px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    column-gap:15px;
+}
+.color--picker button {
+    width:100px;
+}
+.invert {
+    position:absolute;
+    bottom:30px;
+    right:30px;
+    width:120px;
+}
+
+/* --- Font Section --- */
+.font--picker {
+    position:absolute;
+    top:24px;
+    right:24px;
+    width:445px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    column-gap:15px;
+}
+.font--picker button {
+    width:100px;
+}
+</style>
+
 	
-<body class="darkmode home">
-
-    <div class="off-canvas">
-        <div class="social-icons">
-            <a rel="noopener" href="#" target="_blank" class="mr-lg">
-                <img src="/assets/facebook-icon.svg" alt="Facebook">
-            </a>
-            <a rel="noopener" href="#" target="_blank" class="mr-lg">
-                <img src="/assets/instagram-icon.svg" alt="Instagram">
-            </a>
-            <a rel="noopener" href="#" target="_blank" class="mr-lg">
-                <img src="/assets/linkedin-icon.svg" alt="LinkedIn">
-            </a>
-            <a rel="noopener" href="#" target="_blank">
-                <img src="/assets/twitter-icon.svg" alt="Twitter">
-            </a>
+<body>
+    <section class="icon--options">
+        <div class="icon active" data-icon="1">
+            <svg style="color:white;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <g><g><polygon points="44.9,46 47.5,46 47.5,20 44.9,18.2"/><polygon points="26.9,46 26.9,5.4 24.9,4 2.5,20 2.5,23 24,7.5 24,12.8 2.5,28.2 2.5,31.7 24,16.2 24,21.5 2.5,36.8 2.5,40.3 24,24.9 24,30.1 2.5,45.5 2.5,46 6.7,46 24,33.6 24,38.8 13.9,46 18.7,46 24,42.3 24,46"/><polygon points="40.7,15.2 37.9,13.3 37.9,46 40.7,46"/><polygon points="33.7,10.3 30.9,8.3 30.9,46 33.7,46"/></g></g>
+            </svg>
         </div>
-        <nav>
-            <a href="/about" class="text-md weight-semibold color-black ">About</a>
-            <a href="/blog" class="text-md weight-semibold color-black ">Blog</a>
-            <a href="/agency" class="text-md weight-semibold color-black">Agency</a>
-            <a href="#contact" class="text-md weight-semibold color-black">Contact</a>
-        </nav>
-        <div class="gm-logo">
-            <a href="/" style="text-decoration:none;">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 40" style="enable-background:new 0 0 70 40;" xml:space="preserve">
-                <path d="M7.3,19.1c-1.8-0.9-3.1-2-4-3.2C2.4,14.6,2,13.3,2,11.7c0-2.8,0.9-5,2.8-6.8c1.9-1.7,4.4-2.6,7.5-2.6c1,0,2.4,0.1,4,0.3
-                    C18,2.9,19.1,3,19.6,3h5.9v2.9h-3.4c0.7,0.8,1.3,1.7,1.6,2.6c0.4,0.9,0.5,1.8,0.5,2.7c0,2.7-0.9,4.8-2.8,6.4s-4.3,2.4-7.4,2.4
-                    c-0.1,0-0.5,0-1.2,0c-0.7,0-1.2,0-1.8,0c-1,0-1.7,0.1-2.2,0.4c-0.5,0.3-0.7,0.6-0.7,1.1c0,0.4,0.2,0.7,0.5,1
-                    c0.3,0.3,0.8,0.4,1.3,0.4h7.3c2.8,0,5,0.6,6.5,1.7c1.5,1.1,2.2,2.8,2.2,5c0,2.6-1.1,4.6-3.2,6c-2.2,1.4-5.2,2.1-9.2,2.1
-                    c-3.8,0-6.8-0.5-8.9-1.4c-2.1-0.9-3.2-2.2-3.2-3.8c0-0.8,0.3-1.5,0.8-2.1c0.6-0.6,1.4-1,2.5-1.3C4,28.4,3.3,27.8,2.9,27
-                    c-0.4-0.7-0.6-1.5-0.6-2.4c0-1.3,0.4-2.3,1.2-3.3S5.6,19.7,7.3,19.1z M19.3,32.9c0-0.7-0.5-1.3-1.5-1.8c-1-0.5-2.3-0.7-4-0.7
-                    c-1.9,0-3.4,0.2-4.5,0.7c-1.1,0.4-1.6,1.1-1.6,1.8c0,0.8,0.5,1.4,1.6,1.9c1,0.5,2.4,0.7,4.2,0.7s3.2-0.2,4.2-0.7
-                    C18.8,34.3,19.3,33.7,19.3,32.9z M13,17.8c0.9,0,1.6-0.5,2.1-1.6c0.5-1.1,0.7-2.6,0.7-4.7c0-2.4-0.2-4.1-0.7-5.3
-                    C14.7,5.2,14,4.6,13,4.6c-0.9,0-1.6,0.6-2.1,1.7c-0.5,1.1-0.7,2.8-0.7,5.2c0,2.1,0.2,3.6,0.7,4.7C11.4,17.3,12.1,17.8,13,17.8z
-                    M38,3l0.1,2.8c1.2-1.1,2.4-2,3.6-2.6c1.3-0.6,2.6-0.9,3.9-0.9c1.4,0,2.5,0.3,3.5,1c1,0.7,1.7,1.6,2.2,2.9c1.3-1.4,2.6-2.4,3.9-3
-                    c1.3-0.6,2.7-0.9,4.1-0.9c2.2,0,3.8,0.7,4.8,2.2c1,1.5,1.6,3.7,1.6,6.8v10.3c0,1.5,0.2,2.6,0.6,3.3c0.4,0.7,1.1,1.1,2.1,1.3v1.1
-                    H55.3v-1.1c0.7-0.2,1.2-0.6,1.5-1.2c0.3-0.6,0.4-1.7,0.4-3.2V10.5c0-1.6-0.1-2.7-0.4-3.2c-0.3-0.5-0.8-0.8-1.6-0.8
-                    c-0.6,0-1.1,0.2-1.6,0.5c-0.5,0.3-1.1,0.9-1.6,1.5v13.5c0,1.3,0.1,2.3,0.4,2.9c0.3,0.6,0.8,1,1.4,1.3v1.1H41.5v-1.1
-                    c0.7-0.2,1.2-0.6,1.5-1.2c0.3-0.6,0.4-1.7,0.4-3.2V10.5c0-1.6-0.1-2.7-0.4-3.2c-0.3-0.5-0.8-0.8-1.5-0.8c-0.6,0-1.1,0.2-1.7,0.5
-                    c-0.6,0.3-1.1,0.9-1.6,1.5v13.5c0,1.3,0.1,2.3,0.4,2.9c0.3,0.6,0.8,1,1.5,1.2v1.1H26.9v-1.1c1-0.2,1.7-0.7,2.2-1.3
-                    c0.4-0.6,0.6-1.5,0.6-2.7v-14c0-1.3-0.2-2.3-0.6-2.9c-0.4-0.6-1.2-1-2.2-1.2V3H38z"/>
-                </svg>
-            </a>
+
+        <div class="icon" data-icon="2">
+            <svg style="color:white;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <g>
+            <polygon points="11.2,3.4 10.6,3.4 10.6,19.9 9.5,20.7 9.5,46.6 12.3,46.6 12.3,18.7 11.2,19.5"/>
+            <polygon points="4.2,3.4 3.6,3.4 3.6,25 2.5,25.8 2.5,46.6 5.3,46.6 5.3,23.8 4.2,24.6"/>
+            <polygon points="18.3,3.4 17.7,3.4 17.7,14.8 16.6,15.6 16.6,46.6 19.3,46.6 19.3,13.6 18.3,14.4"/>
+            <polygon points="39.4,3.4 38.8,3.4 38.8,19.6 37.7,18.8 37.7,46.6 40.5,46.6 40.5,20.8 39.4,20"/>
+            <polygon points="25.3,3.4 24.7,3.4 24.7,9.7 23.6,10.5 23.6,46.6 26.4,46.6 26.4,10.6 25.3,9.8"/>
+            <polygon points="32.3,3.4 31.7,3.4 31.7,14.5 30.7,13.7 30.7,46.6 33.4,46.6 33.4,15.7 32.3,14.9"/>
+            <polygon points="46.4,25.1 46.4,3.4 45.8,3.4 45.8,24.7 44.7,23.9 44.7,46.6 47.5,46.6 47.5,25.9"/>
+        </g>
+        </svg>
         </div>
+
+        <div class="icon" data-icon="3">
+            <svg style="color:white;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<g>
+	<path d="M32.4,46.2V35c0-2.3-1.6-4.4-3.8-5l-3.1-0.9c-0.4-0.1-0.6-0.4-0.6-0.8V3.8l-7.5,5.4v13.7c0,2.3,1.6,4.4,3.8,5l3.1,0.9
+		c0.4,0.1,0.6,0.4,0.6,0.8v16.6H32.4z"/>
+	<path d="M32.5,9.3v17.8c0,2.3,1.6,4.4,3.8,5l3.1,0.9c0.4,0.1,0.6,0.4,0.6,0.8v12.4h7.5v-7.1c0-2.3-1.6-4.4-3.8-5l-3-0.8
+		c-0.4-0.1-0.6-0.4-0.6-0.8V14.7L32.5,9.3z"/>
+	<path d="M17.4,46.2V30.8c0-2.3-1.6-4.4-3.8-5L10.5,25c-0.4-0.1-0.6-0.4-0.6-0.8v-9.4L2.5,20c0.4,1.8,1.8,3.2,3.6,3.7l3.1,0.9
+		c0.4,0.1,0.6,0.4,0.6,0.8v20.7H17.4z"/>
+</g>
+</svg>
+        </div>
+
+        <div class="icon" data-icon="4">
+            <svg style="color:white; width:150px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M18,33.8c-3.1-1.1-5.3-4-5.3-7.5c0-4.4,3.6-8,8-8c2.9,0,5.4,1.5,6.8,3.9L34,14c-3.3-3.6-8.1-5.9-13.4-5.9
+			c-10,0-18.1,8.1-18.1,18.1c0,6.7,3.6,12.5,8.9,15.6L18,33.8z"/>
+	</g>
+	<polygon points="47.5,41.8 27.5,22.1 21.7,29.1 34.6,41.8 	"/>
+</g>
+</svg>
+        </div>
+    </section>
+
+
+    <!-- Interface Controls -->
+
+    <div class="icon--picker">
+        <button class="active" data-icon="1">Icon 1</button>
+        <button data-icon="2">Icon 2</button>
+        <button data-icon="3">Icon 3</button>
+        <button data-icon="4">Icon 4</button>
     </div>
-    <div class="menu-icon">
-        <div></div>
-        <div></div>
+
+    <div class="color--picker">
+        <button class="option--1 active" data-color="#fff" data-bg-color="#000">Color Set 1</button>
+        <button class="option--2" data-color="#12110c" data-bg-color="#f8ecdb">Color Set 2</button>
+        <button class="option--3" data-color="#313a2e" data-bg-color="#e4ead9">Color Set 3</button>
+        <button class="option--4" data-color="#11262f" data-bg-color="#e0eced">Color Set 4</button>
     </div>
 
-    <main class="container pt-2xl pb-xl">
-        <div class="row text-left pt-xl">
+    <button class="invert">
+        Invert Colors
+    </button>
 
-            <h1 class="heading-xl mb-lg block weight-semibold">Hi, I’m Gary.<img src="/assets/gary-magnone-headshot.png" class="inline-headshot"><br class="mobile">I’m a digital strategist, agency executive, and entrepeneur.</h1>
+    <div class="font--picker">
+        <button>Font 1</button>
+        <button>Font 2</button>
+        <button>Font 3</button>
+        <button>Font 4</button>
+    </div>
 
-            <p class="text-2xl mb-lg block">I implement content-led growth programs, optimize operational efficiency in digital agencies, and create customer-centric web experiences.</p>
 
-          </div>
 
-          <div class="row text-left mt-2xl">
+    <footer>
+        <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
 
-            <h2 class="heading-lg mb-lg block weight-semibold">Here's what I'm up to.</h2>
+        $('.icon--picker button').click(function(){
 
-            <div class="grid-2 color-cards">
+            $('.icon--picker button').removeClass('active');
+            $(this).addClass('active');
 
-                <a href="https://www.magneti.com/">
-                    <div class="card" style="background-color:#edf6f7;">
-                        <img class="logo" src="/assets/magneti.png" style="width:60px; height:auto;">
-                        <h3 class="heading-xs color-black mb-md mt-sm block weight-semibold">Magneti</h3>
-                        <p class="text-lg">Digital marketing + brand agency obsessed with delivering effective and innovative growth strategy for clients.</p>
-                    </div>
-                </a>
+            let primaryColor = $('.icon svg').css('color');
+            let secondaryColor = $('body').css('background-color');
             
-                <a href="https://contrast.house">
-                    <div class="card" style="background-color:#fcf7f1;">
-                        <svg class="logo" style="width:50px;height:50px; enable-background:new 0 0 55 55; color:black;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                            viewBox="0 0 55 55" xml:space="preserve">
-                        <g>
-                            <g>
-                                <polygon points="51.2,52.5 54.3,52.5 54.3,21.6 51.2,19.4 		"/>
-                                <polygon points="29.7,52.5 29.7,4.1 27.4,2.5 0.7,21.6 0.7,25.1 26.4,6.7 26.4,13 0.7,31.3 0.7,35.4 26.4,17 26.4,23.3 0.7,41.6 
-                                    0.7,45.8 26.4,27.4 26.4,33.5 0.7,52 0.7,52.5 5.7,52.5 26.4,37.7 26.4,43.9 14.3,52.5 20,52.5 26.4,48.1 26.4,52.5 		"/>
-                                <polygon points="46.2,15.8 42.9,13.5 42.9,52.5 46.2,52.5 		"/>
-                                <polygon points="37.9,10 34.6,7.6 34.6,52.5 37.9,52.5 		"/>
-                            </g>
-                        </g>
-                        </svg>
-                        <h3 class="heading-xs color-black mb-md mt-sm block weight-semibold">Contrast House</h3>
-                        <p class="text-lg">Editorial-style listing photography & cinematic video tours that help LA’s best real estate agents sell more homes.</p>
-                    </div>
-                </a>
+            let iconNumber = $(this).attr('data-icon');
+            $('.icon').removeClass('active');
+            $('body').find(`.icon[data-icon='${iconNumber}']`).addClass('active')
+        });
 
-                <a href="https://hopped.com">
-                    <div class="card" style="background-color:#edf9f5;">
-                        <svg class="logo" style="width:55px;height:55px"  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                            viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;" xml:space="preserve">
-                        <style type="text/css">
-                            .st0{fill:#FFFFFF;}
-                            .st1{fill:#FFC405;}
-                            .st2{fill:#00A967;}
-                        </style>
-                        <g>
-                            <rect x="13" y="9.9" class="st0" width="26.9" height="10.4"/>
-                            <g>
-                                <polygon class="st1" points="39.9,36.5 26.4,41.3 13.2,35.3 11.3,18 42.1,18 		"/>
-                            </g>
-                            <path class="st2" d="M47.8,23.9c0-11.8-9.6-21.4-21.4-21.4C14.6,2.5,5,12.1,5,23.9c0,6,2.4,11.3,6.4,15.2h-0.1L25.1,52
-                                c0.8,0.7,1.9,0.7,2.7,0L41.5,39h-0.1C45.3,35.2,47.8,29.8,47.8,23.9z M26.4,11.5c6.8,0,12.3,5.5,12.3,12.3s-5.5,12.3-12.3,12.3
-                                s-12.3-5.5-12.3-12.3C14.1,17,19.6,11.5,26.4,11.5z"/>
-                        </g>
-                        </svg>
-                        <h3 class="heading-xs color-black mb-md mt-sm block weight-semibold">Hopped</h3>
-                        <p class="text-lg">Digital media company serving the craft beer industry in Southern California with weekly news, guides, videos, and podcasts. </p>
-                    </div>
-                </a>
+        $('.color--picker button').click(function(){
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
 
-                <a href="https://gethighrise.com">
-                    <div class="card">
-                        <img class="logo" src="/assets/highrise.png" style="width:60px; height:auto;">
-                        <h3 class="heading-xs color-black mb-md mt-sm block weight-semibold">Highrise</h3>
-                        <p class="text-lg">Digital strategy + creative studio providing custom brand, web, and marketing solutions for clients that drive business growth.</p>
-                    </div>
-                </a>
+            let primaryColor = $(this).attr('data-color');
+            let secondaryColor = $(this).attr('data-bg-color');
 
-            </div>
+            if ($('.invert').hasClass('active')) {
+                //Set icon color
+                $('.icon svg').css('color', secondaryColor);
+                //Set page body background color
+                $('body').css('background-color',primaryColor);
+                }
+                else {
+                //Set icon color
+                $('.icon svg').css('color', primaryColor);
+                //Set page body background color
+                $('body').css('background-color',secondaryColor);
+            };
+        });
 
-          </div>
-          <div class="row text-left mt-2xl">
+        $('.invert').click(function(){
+            $(this).addClass('active');
 
-            <h2 class="heading-lg mb-md block weight-semibold">What I'm <br class="mobile">thinking about.</h2>
+            let primaryColor = $('.icon svg').css('color');
+            let secondaryColor = $('body').css('background-color');
 
-            <font class="text-xl mb-lg block">Here are some of my latest thoughts on marketing, strategy, entrepreneurship, and productivity.</font>
+            //Set icon color
+            $('.icon svg').css('color', secondaryColor);
+            //Set page body background color
+            $('body').css('background-color',primaryColor);
 
-            <div class="grid-3 post-grid">
-
-                <div style="position:relative;">
-                    <p class="date-label text-sm weight-bold">2 Jan 2023</p>
-                    <img src="/assets/post-cover-1.jpg" style="width:100%; height:auto; border-radius:15px 15px 0 0; ">
-                    <div class="card" style="border-radius:0 0 15px 15px">
-                        <h3 class="heading-xs mb-sm block weight-semibold color-black">How to get 1% better in 2023</h3>
-                        <p class="text-md">From work and family to health and play, here’s my plan to make the most of 2023…</p>
-                    </div>
-                </div>
-
-                <div style="position:relative;">
-                    <p class="date-label text-sm weight-bold">2 June 2020</p>
-                    <img src="/assets/post-cover-2.jpg" style="width:100%; height:auto; border-radius:15px 15px 0 0;">
-                    <div class="card" style="border-radius:0 0 15px 15px">
-                        <h3 class="heading-xs mb-sm block weight-semibold color-black">Should you auto-syndicate posts across social media platforms?</h3>
-                        <p class="text-md">In this episode, Mack and Gary talk through the pros and cons...</p>
-                    </div>
-                </div>
-
-                <div style="position:relative;">
-                    <p class="date-label text-sm weight-bold">1 June 2020</p>
-                    <img src="/assets/post-cover-3.jpg" style="width:100%; height:auto; border-radius:15px 15px 0 0;">
-                    <div class="card" style="border-radius:0 0 15px 15px">
-                        <h3 class="heading-xs mb-sm block weight-semibold color-black">Where’s the best place to host your content?</h3>
-                        <p class="text-md">In episode 4 of The Marketing Grind, Mack and Gary talk about what you need to think about...</p>
-                    </div>
-                </div>
-            </div>
-
-          </div>
-          <div class="row text-left mt-2xl testimonials">
-
-            <h2 class="heading-lg mb-md block weight-semibold">What other <br class="mobile">people think.</h2>
-
-            <font class="text-xl mb-lg block">Of course I think I’m great. <br class="mobile">But here’s what other people think…</font>
-
-            <div class="card fullwidth-card">
-                <img class="testimonial" src="https://www.garymagnone.com/wp-content/uploads/2021/12/Ray-Headshot.jpg">
-                <h3 class="text-xl mb-sm block weight-semibold color-black">Ray Cameron</h3>
-                <p class="text-md">“I’ve been involved with SEO for twelve years and Gary is the best expert I’ve ever worked with. Algorithms are changing rapidly and drastically and it’s important to stay on top of the latest developments. I’ve never come across a change that Gary wasn’t already aware of. He keeps a cool head when we see fluctuations in performance, is patient to let things settle out and makes adjustments when the data tells him it is time. SEO is a long term play and we sometimes have clients get impatient, but when Gary gets to respond to the clients directly, they consistently come away with confidence that we’re on the right track and we know what we’re doing. Gary is incredibly easy to work with, a reliable teammate and an excellent communicator.”</p>
-            </div>
-            <div class="grid-2">
-
-                <div class="card">
-                    <img class="testimonial" src="https://www.garymagnone.com/wp-content/uploads/2021/12/Rob-Headshot.jpg">
-                    <h3 class="text-xl mb-sm block weight-semibold color-black">Rob Sherman</h3>
-                    <p class="text-md">“I’ve worked with Gary on many website projects of different sizes in different market segments and if I had to choose one word to describe what he provides it would be “excellence.” His academic diligence and rigor are uncommon and outstanding. His communication style is easy to understand and concise. His work is effective with stellar results. He is thorough, creative when he needs to be, and relentless about achieving consistent and compounding results for clients, which he delivers!”</p>
-                </div>
-
-                <div class="card">
-                    <img class="testimonial" src="https://www.garymagnone.com/wp-content/uploads/2021/12/Aaron-Headshot.jpg">
-                    <h3 class="text-xl mb-sm block weight-semibold color-black">Aaron Cote</h3>
-                    <p class="text-md">“Working with Gary has been a phenomenal experience. He’s an incredibly genuine guy who often goes the extra mile for his clients, his colleagues, and even for himself in the form of constant self-improvement. He’s helped me improve my digital marketing abilities tremendously. Gary is definitely somebody you want to be in contact with – whether it be for his digital marketing finesse, knowledge and appreciation of craft beer, or just because of his top-notch character.”</p>
-                </div>
-
-                <div class="card">
-                    <img class="testimonial" src="https://www.garymagnone.com/wp-content/uploads/2021/12/Brad-Headshot.jpg">
-                    <h3 class="text-xl mb-sm block weight-semibold color-black">Brad Imming</h3>
-                    <p class="text-md">“Communication with Gary has been great, it is clear that project management is one of his strengths. He gives clear deliverables and quickly responds to any questions I have. I’m looking forward to working with him on more projects in the future and would highly recommend him to anyone who is considering working with him.”</p>
-                </div>
-
-                <div class="card">
-                    <img class="testimonial" src="https://www.garymagnone.com/wp-content/uploads/2021/12/Mike-Headshot.jpg">
-                    <h3 class="text-xl mb-sm block weight-semibold color-black">Mike Garite</h3>
-                    <p class="text-md">“Gary has been an advisor on many of my major business decisions throughout the last 10 years. His decision making is cool, calm, and focused and combines elements of strong practicality and heavy analytical thinking. Gary is highly communicative, empathetic, and can deliver results with limited guidance. He turns your projects into his projects through a systematic approach that allows him to ensure the job is done well.”</p>
-                </div>
-
-                <div class="card">
-                    <img class="testimonial" src="https://www.garymagnone.com/wp-content/uploads/2021/12/Luke-Headshot-Square-280x280.jpg">
-                    <h3 class="text-xl mb-sm block weight-semibold color-black">Luke Balbirnie</h3>
-                    <p class="text-md">“I have been working with Gary for a little over 2 and a half years, and I can confidently say that he is one of the most reliable people that I have ever worked with. His dedication to his craft is immediately apparent, and he is always looking for new opportunities to refine his skill set, and deepen his knowledge.”</p>
-                </div>
-
-                <div class="card">
-                    <img class="testimonial" src="https://www.garymagnone.com/wp-content/uploads/2021/12/Josh-Headshot.jpg">
-                    <h3 class="text-xl mb-sm block weight-semibold color-black">Joshua Swanson</h3>
-                    <p class="text-md">“Gary has always been transparent with his advice, on point with his strategy, and a man of high integrity. We appreciated Gary’s honest feedback and “can-do” attitude. Had we not moved our agency out of state, we would probably still be working with Gary on continuing to innovate our digital marketing strategies.”</p>
-                </div>
-
-                
-
-
-            </div>
-
-          </div>
-
-          <div class="row text-center mt-2xl">
-
-            <h2 class="heading-lg mb-md block weight-semibold">Contact me.</h2>
-
-           <p class="text-lg block" style="max-width:700px;
-           float:none;
-           margin-left:auto;
-           margin-right:auto;">I’m always open to discuss new projects, help solve problems, or just talk shop. Shoot me a message and let’s chat. <a>Or connect with me on LinkedIn.</a></p>
-
-       </div>
-    </main>
-
-    <script type="text/javascript">
+        });
         
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-       if (prefersDarkScheme.matches) {
-           document.body.classList.add('darkmode');
-       } else {  
-           document.body.classList.remove('darkmode');
-       }
-    </script>
-    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        $( ".menu-icon" ).click(function() {
-            $(this).toggleClass('active');
-            $('.off-canvas').toggleClass('active');
-        });
-        $( "nav a" ).click(function() {
-            $('.off-canvas').removeClass('active');
-        });
-    
-    </script>
+
+         </script>
+    </footer>
+
 
 </body>
 </html>
