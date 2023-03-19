@@ -120,7 +120,7 @@ body {
 	color:var(--body);
 	font-weight:400;
 }
-p, h1, h2, h3, h4, h5, h6 {
+p, h1, h2, h3, h4, h5, h6, a, strong, em, i {
     margin:0;
     font-family: 'Montserrat', sans-serif;
 }
@@ -790,7 +790,6 @@ nav a,
 .mobile-settings button,
 .mobile-settings a {
     display:flex;
-    max-width:100%;
     justify-content:flex-start;
     align-items:center;
     border-radius:0.5rem;
@@ -799,6 +798,7 @@ nav a,
     cursor:pointer;
     background-color:transparent;
 	padding:10px;
+    max-width:100%;
     width:100%;
     height:auto;
     transition:background .3s ease;
@@ -844,15 +844,19 @@ nav button span,
 nav a span,
 .mobile-settings button span,
 .mobile-settings a span {
+    font-family:'Montserrat';
+    font-weight:400;
     opacity:0;
     margin-left:10px;
-    font-size:15px;
+    font-size:14px;
     font-weight:600;
     color:black;
     transition:opacity .5s ease;
+    word-break: keep-all;
+    white-space: nowrap;
 }
 nav:hover {
-    width:220px;
+    width:240px;
 }
 nav:hover .invisible {
     opacity:1;
