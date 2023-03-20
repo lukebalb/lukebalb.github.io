@@ -85,17 +85,169 @@
             <!-- END Dashboard Tab -->
 
             <!-- Events Tab -->
-            <div id="events" class="hidden tab" data-content="2">
+            <div id="events" class="tab" data-content="2">
                 <div class="card-container">
                     <div class="flex flex-distribute flex-end card">
                         <div>
-                            <h2 class="heading-sm font-bold mb-xs color-heading">Agenda</h2>
-                            <p class="text-md color-body">These weekly sessions will consist of presentations, panel discussions, small and large group discussions and assignments, as well as opportunities for reflection and self-guided learning.<br><br>
-                                In addition to the 2-hour sessions, it is expected that participants will comment on discussion board topics, connect with co-participants, and complete quizzes.</p>
+                            <h2 class="heading-sm font-bold mb-md color-heading">Agenda</h2>
+                            <p class="text-md color-body mb-sm">These weekly sessions will consist of presentations, panel discussions, small and large group discussions and assignments, as well as opportunities for reflection and self-guided learning.</p>
+                            <p class="text-md color-body">In addition to the 2-hour sessions, it is expected that participants will comment on discussion board topics, connect with co-participants, and complete quizzes.</p>
                         </div>
                         <!--<a class="create-event button">+ Add Event</a>-->
                     </div>
+         
+                
+                <style>
+                    .event-icon {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        min-width: 56px;
+                        width: 56px;
+                        height: 56px;
+                        border-radius: 100px;
+                        background-color: rgba(251, 23, 38, 0.06);
+                    }
+                
+                    .event-icon img {
+                        width: 32px;
+                        height: auto;
+                        min-width: 32px;
+                    }
+                
+                    .event-container {
+                        padding: 24px;
+                    }
+                
+                    .event-container .button {
+                        border: 1px solid var(--primary);
+                        float:left;
+                    }
+                
+                    .event-container .button svg {
+                        margin-right: 4px;
+                        width: 18px;
+                        color: white;
+                        transition: all 1s ease;
+                    }
+                
+                    .event-container .button:hover {
+                        background-color: var(--primary-25);
+                        color: var(--primary);
+                    }
+                
+                    .event-container .button:hover svg {
+                        color: var(--primary);
+                    }
+                
+                    .event-date {
+                        background-color: var(--primary-7);
+                        border-radius: 100px;
+                        line-height: 0;
+                        padding: 8px 12px;
+                        display: inline-flex;
+                        align-items: center;
+                        float: left;
+                        width: auto;
+                        margin-right: 10px;
+                        font-weight: 600;
+                    }
+                
+                    .event-time {
+                        background-color: var(--primary-7);
+                        border-radius: 100px;
+                        line-height: 0;
+                        padding: 8px 12px;
+                        display: inline-flex;
+                        align-items: center;
+                        float: left;
+                        width: auto;
+                        font-weight: 600;
+                    }
+                
+                    .event-container .event-date svg,
+                    .event-container .event-time svg,
+                    .event-container .event-icon svg {
+                        color: var(--primary);
+                        height: 18px;
+                        width: auto;
+                        margin-right: 7px;
+                    }
+
+                    .file-asset {
+                        background-color: var(--primary-7);
+                        color:var(--title);
+                        border-radius: 5px;
+                        padding: 8px;
+                        display: inline-flex;
+                        align-items: center;
+                        float: left;
+                        width: auto;
+                        font-weight: 600;
+                        font-size:14px;
+                        margin-right:12px;
+                        margin-top:6px;
+                        margin-bottom:6px;
+                        line-height:14px;
+                        cursor:pointer;
+                        border:2px solid var(--primary-7);
+                        transition:border .5s ease;
+                    }
+                    .file-asset:hover {
+                        border-color:var(--primary)
+                    }
+
+                
+                
+                </style>
+                
+             
+                    <div class="text-left">
+                        <div class="event-container card">
+                            <!-- Event Title -->
+                            <h3 class="color-heading heading-xs underline weight-bold mb-md width-100">Week 1</h3>
+                            <!-- Event Date -->
+                            <p class="event-date text-xs weight-bold color-black mb-md mt-xs"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                                </svg>Weds, Apr 12</p>
+                            <!-- Event Time -->
+                            <p class="event-time text-xs color-black mb-md mt-xs">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>1 - 3pm EST
+                            </p>
+                            <!-- Event Excerpt-->
+                            <div class="width-100 block text-left mb-md">
+                                <ul>
+                                    <li>Understanding the Campus Talent Ecosystem</li>
+                                    <li>Understanding the Campus Talent Ecosystem</li>
+                                    <li>Understanding the Campus Talent Ecosystem</li>
+                                </ul>
+                            </div>
+                            <div class="width-100 block text-left">
+                                <!-- Event URL-->
+                                <a href="" style="display:inline-flex;" class="button button__solid flex-center weight-semibold"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+                                    </svg>Zoom URL</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-container card">
+                            <!-- Event Title -->
+                            <h3 class="color-heading heading-xs underline weight-bold mb-md width-100">Week 1</h3>
+                            <!-- Event Excerpt-->
+                            <div class="width-100 block text-left mb-md">
+                                <p>Graham Donald, Brainstorm Strategy Group Inc. shares the Campus Talent Ecosystem and provides an intro to strategic planning.</p>
+                            </div>
+                            <div class="width-100 text-left">
+                                <!-- File Asset-->
+                                <a class="file-asset inline-flex flex-center"><div style="width:18px;height:18px;background-color:var(--primary);border-radius:100px;margin-right:8px;"></div>Week 1 Slides</a>
+                                <a class="file-asset"><div style="width:18px;height:18px;background-color:var(--primary);border-radius:100px;margin-right:8px;"></div>Session Recording: Part 1</a>
+                                <a class="file-asset"><div style="width:18px;height:18px;background-color:var(--primary);border-radius:100px;margin-right:8px;"></div>Session Recording: Part 2</a>
+                                <a class="file-asset"><div style="width:18px;height:18px;background-color:var(--primary);border-radius:100px;margin-right:8px;"></div>Session Recording: Part 3</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
             <!-- END Events Tab -->
             

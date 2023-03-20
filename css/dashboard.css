@@ -215,6 +215,12 @@ h5 {
     /* font size:24px */
     line-height:2rem;
 }
+.underline {
+    text-decoration:underline;
+    text-decoration-color:var(--primary);
+    text-underline-offset:5px;
+    text-decoration-thickness:2px;
+}
 
 @media(max-width:767px) {
     /* --- Headings --- */
@@ -323,6 +329,29 @@ p {
     }
 }
 
+/* Lists */
+ul {
+    padding-left:22px;
+    float:left;
+    margin:0;
+}
+ul li {
+    font-size:1rem;
+    line-height:1.54rem;
+    margin-bottom:0.45rem;
+}
+ul li::marker {
+    color:var(--primary);
+}
+ul li:last-child {
+    margin-bottom:0;
+}
+@media(max-width:767px) {
+    ul {
+        padding-left:18px;
+    }
+}
+
 /* --- Brand Colors --- */
 .color-primary {
     color:var(--primary);
@@ -384,8 +413,16 @@ p {
     overflow:hidden;
 }
 
+.block {
+    display:block;
+    float:left;
+}
+
 
 /* --- Flexbox --- */
+.width-100 {
+    width:100%;
+}
 .flex {
 	display:flex;
 }
@@ -607,7 +644,7 @@ p {
 
 .button {
     text-decoration:none !important;
-    transition:all 1s ease;
+    transition:all .5s ease;
     border-radius:1000px;
     font-weight:600;
 	font-family: 'Montserrat', sans-serif; 
